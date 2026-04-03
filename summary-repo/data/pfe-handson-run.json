@@ -1,0 +1,5024 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.69.3"
+  },
+  "ReportID": "019d50df-02a1-7493-8cc2-d68cac08b08a",
+  "CreatedAt": "2026-04-03T01:04:45.729300763Z",
+  "ArtifactName": "sbom/sbom.json",
+  "ArtifactType": "cyclonedx",
+  "Results": [
+    {
+      "Target": "frontend/common/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Packages": [
+        {
+          "ID": "@babel/runtime@7.24.5",
+          "Name": "@babel/runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/%40babel/runtime@7.24.5",
+            "UID": "69a9ab59cc23cc57",
+            "BOMRef": "ff8b5683-bbc0-4971-9468-3f4354895f96"
+          },
+          "Version": "7.24.5",
+          "DependsOn": [
+            "regenerator-runtime@0.14.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/core@1.6.2",
+          "Name": "@floating-ui/core",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/core@1.6.2",
+            "UID": "b53aa24dd42e618a",
+            "BOMRef": "5f0a01c1-1676-43d0-a7ba-f12e173b7c7b"
+          },
+          "Version": "1.6.2",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/dom@1.6.5",
+          "Name": "@floating-ui/dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/dom@1.6.5",
+            "UID": "2fc370cd4e53bcf6",
+            "BOMRef": "979c783d-8d77-4904-a35c-f438033dcf4a"
+          },
+          "Version": "1.6.5",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2",
+            "@floating-ui/core@1.6.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react@0.26.17",
+          "Name": "@floating-ui/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react@0.26.17",
+            "UID": "24133b8b0c3961ea",
+            "BOMRef": "56251d53-c8ed-4da9-90ab-2ed153062740"
+          },
+          "Version": "0.26.17",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2",
+            "react-dom@18.3.1",
+            "tabbable@6.2.0",
+            "@floating-ui/react-dom@2.1.0",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react-dom@2.1.0",
+          "Name": "@floating-ui/react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react-dom@2.1.0",
+            "UID": "e677d6686f5c119d",
+            "BOMRef": "7d87e301-2f10-4f85-96be-749af0e499d2"
+          },
+          "Version": "2.1.0",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "@floating-ui/dom@1.6.5",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/utils@0.2.2",
+          "Name": "@floating-ui/utils",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/utils@0.2.2",
+            "UID": "ad331321fbffbcac",
+            "BOMRef": "40d0ffe9-be78-4814-9a9d-5b092029b184"
+          },
+          "Version": "0.2.2"
+        },
+        {
+          "ID": "@reduxjs/toolkit@2.2.5",
+          "Name": "@reduxjs/toolkit",
+          "Identifier": {
+            "PURL": "pkg:npm/%40reduxjs/toolkit@2.2.5",
+            "UID": "df3ba4d91d3a0542",
+            "BOMRef": "41221636-b348-4ad7-9f65-747c51f60640"
+          },
+          "Version": "2.2.5",
+          "DependsOn": [
+            "redux-thunk@3.1.0",
+            "react-redux@9.1.2",
+            "reselect@5.1.1",
+            "react@18.3.1",
+            "immer@10.1.1",
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "@remix-run/router@1.16.1",
+          "Name": "@remix-run/router",
+          "Identifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "afd4985b95c33041",
+            "BOMRef": "5fb1f87e-6516-40bb-8afd-1f083c59e25a"
+          },
+          "Version": "1.16.1"
+        },
+        {
+          "ID": "@types/prop-types@15.7.12",
+          "Name": "@types/prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/prop-types@15.7.12",
+            "UID": "c4a8f7291e496211",
+            "BOMRef": "4f78a336-d919-4df3-961b-7037467b03c4"
+          },
+          "Version": "15.7.12"
+        },
+        {
+          "ID": "@types/react@18.3.2",
+          "Name": "@types/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react@18.3.2",
+            "UID": "eb813bffa00560ef",
+            "BOMRef": "9af7dfdf-f180-447a-923a-e86cfb09e0ef"
+          },
+          "Version": "18.3.2",
+          "DependsOn": [
+            "@types/prop-types@15.7.12",
+            "csstype@3.1.3"
+          ]
+        },
+        {
+          "ID": "@types/use-sync-external-store@0.0.3",
+          "Name": "@types/use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/use-sync-external-store@0.0.3",
+            "UID": "e60cbe623ce77960",
+            "BOMRef": "f2c1add4-15a1-4c7f-924c-8011aed2e3bd"
+          },
+          "Version": "0.0.3"
+        },
+        {
+          "ID": "attr-accept@2.2.2",
+          "Name": "attr-accept",
+          "Identifier": {
+            "PURL": "pkg:npm/attr-accept@2.2.2",
+            "UID": "3f3baad4c5648b1f",
+            "BOMRef": "pkg:npm/attr-accept@2.2.2"
+          },
+          "Version": "2.2.2"
+        },
+        {
+          "ID": "clone@2.1.2",
+          "Name": "clone",
+          "Identifier": {
+            "PURL": "pkg:npm/clone@2.1.2",
+            "UID": "43b5f3c8cf7205ea",
+            "BOMRef": "b2a32ad4-0ea0-43be-bf1e-bad79c6255b6"
+          },
+          "Version": "2.1.2"
+        },
+        {
+          "ID": "clsx@2.1.1",
+          "Name": "clsx",
+          "Identifier": {
+            "PURL": "pkg:npm/clsx@2.1.1",
+            "UID": "39df093fddbc39cb",
+            "BOMRef": "a0510739-1d81-4275-ba58-4ac32392f829"
+          },
+          "Version": "2.1.1"
+        },
+        {
+          "ID": "csstype@3.1.3",
+          "Name": "csstype",
+          "Identifier": {
+            "PURL": "pkg:npm/csstype@3.1.3",
+            "UID": "1ff95ba846a3d828",
+            "BOMRef": "b1119efa-c5a2-411a-9b13-d44dbb024c30"
+          },
+          "Version": "3.1.3"
+        },
+        {
+          "ID": "date-fns@3.6.0",
+          "Name": "date-fns",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns@3.6.0",
+            "UID": "8ee22562464c004f",
+            "BOMRef": "08f65940-2bc1-40b3-8096-df23fc76b20f"
+          },
+          "Version": "3.6.0"
+        },
+        {
+          "ID": "date-fns-tz@3.1.3",
+          "Name": "date-fns-tz",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns-tz@3.1.3",
+            "UID": "ab16824801d0520d",
+            "BOMRef": "f40dcdf7-a1bc-4354-b462-dcc924587662"
+          },
+          "Version": "3.1.3",
+          "DependsOn": [
+            "date-fns@3.6.0"
+          ]
+        },
+        {
+          "ID": "encoding-japanese@2.1.0",
+          "Name": "encoding-japanese",
+          "Identifier": {
+            "PURL": "pkg:npm/encoding-japanese@2.1.0",
+            "UID": "462e424d30958da7",
+            "BOMRef": "pkg:npm/encoding-japanese@2.1.0"
+          },
+          "Version": "2.1.0"
+        },
+        {
+          "ID": "file-selector@0.6.0",
+          "Name": "file-selector",
+          "Identifier": {
+            "PURL": "pkg:npm/file-selector@0.6.0",
+            "UID": "3d0c5f5ebfc70ecb",
+            "BOMRef": "pkg:npm/file-selector@0.6.0"
+          },
+          "Version": "0.6.0",
+          "DependsOn": [
+            "tslib@2.6.3"
+          ]
+        },
+        {
+          "ID": "html-parse-stringify@3.0.1",
+          "Name": "html-parse-stringify",
+          "Identifier": {
+            "PURL": "pkg:npm/html-parse-stringify@3.0.1",
+            "UID": "35c01af703845680",
+            "BOMRef": "f0cbb059-b92b-4f28-8224-97c03a897dbc"
+          },
+          "Version": "3.0.1",
+          "DependsOn": [
+            "void-elements@3.1.0"
+          ]
+        },
+        {
+          "ID": "i18next@23.11.4",
+          "Name": "i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/i18next@23.11.4",
+            "UID": "77e1f93cb4300c4",
+            "BOMRef": "444f6f03-f791-4296-8832-4aeb1a34ca18"
+          },
+          "Version": "23.11.4",
+          "DependsOn": [
+            "@babel/runtime@7.24.5"
+          ]
+        },
+        {
+          "ID": "immer@10.1.1",
+          "Name": "immer",
+          "Identifier": {
+            "PURL": "pkg:npm/immer@10.1.1",
+            "UID": "6b93a12b39e24a4a",
+            "BOMRef": "fdc01458-19d6-4393-8681-7714df49af31"
+          },
+          "Version": "10.1.1"
+        },
+        {
+          "ID": "js-tokens@4.0.0",
+          "Name": "js-tokens",
+          "Identifier": {
+            "PURL": "pkg:npm/js-tokens@4.0.0",
+            "UID": "910a3cdd914175aa",
+            "BOMRef": "edcef757-c4df-4e06-993d-23a69212c1b1"
+          },
+          "Version": "4.0.0"
+        },
+        {
+          "ID": "lodash.clonedeep@4.5.0",
+          "Name": "lodash.clonedeep",
+          "Identifier": {
+            "PURL": "pkg:npm/lodash.clonedeep@4.5.0",
+            "UID": "332a4b6b247f1720",
+            "BOMRef": "8eca208f-10fc-40ca-9b6d-0f5be1426b94"
+          },
+          "Version": "4.5.0"
+        },
+        {
+          "ID": "loose-envify@1.4.0",
+          "Name": "loose-envify",
+          "Identifier": {
+            "PURL": "pkg:npm/loose-envify@1.4.0",
+            "UID": "a0c4a4f52b760bf3",
+            "BOMRef": "452c95ee-3d3b-4114-b370-8e7d663cc64d"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "js-tokens@4.0.0"
+          ]
+        },
+        {
+          "ID": "object-assign@4.1.1",
+          "Name": "object-assign",
+          "Identifier": {
+            "PURL": "pkg:npm/object-assign@4.1.1",
+            "UID": "4b60f7eea23bc610",
+            "BOMRef": "63d12aec-791a-4396-b3d0-b3cea425b777"
+          },
+          "Version": "4.1.1"
+        },
+        {
+          "ID": "papaparse@5.4.1",
+          "Name": "papaparse",
+          "Identifier": {
+            "PURL": "pkg:npm/papaparse@5.4.1",
+            "UID": "6a915274beedbe41",
+            "BOMRef": "pkg:npm/papaparse@5.4.1"
+          },
+          "Version": "5.4.1"
+        },
+        {
+          "ID": "prop-types@15.8.1",
+          "Name": "prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/prop-types@15.8.1",
+            "UID": "fbdc1ba1c98534a2",
+            "BOMRef": "a02a6045-664f-4f4b-8896-950aa19ca718"
+          },
+          "Version": "15.8.1",
+          "DependsOn": [
+            "loose-envify@1.4.0",
+            "object-assign@4.1.1",
+            "react-is@16.13.1"
+          ]
+        },
+        {
+          "ID": "property-expr@2.0.6",
+          "Name": "property-expr",
+          "Identifier": {
+            "PURL": "pkg:npm/property-expr@2.0.6",
+            "UID": "6334e96b0a9df46b",
+            "BOMRef": "3f65e8a7-7429-481d-90a7-1beef094e31c"
+          },
+          "Version": "2.0.6"
+        },
+        {
+          "ID": "react@18.3.1",
+          "Name": "react",
+          "Identifier": {
+            "PURL": "pkg:npm/react@18.3.1",
+            "UID": "d87999b1405184e8",
+            "BOMRef": "f9773409-cfa3-4a32-b530-8fc04182fae5"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "react-datepicker@6.9.0",
+          "Name": "react-datepicker",
+          "Identifier": {
+            "PURL": "pkg:npm/react-datepicker@6.9.0",
+            "UID": "c0b79d52eb51c11f",
+            "BOMRef": "8e9988f2-b1b3-4f38-843d-164a060fa324"
+          },
+          "Version": "6.9.0",
+          "DependsOn": [
+            "date-fns@3.6.0",
+            "react-dom@18.3.1",
+            "@floating-ui/react@0.26.17",
+            "prop-types@15.8.1",
+            "clsx@2.1.1",
+            "react-onclickoutside@6.13.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-dom@18.3.1",
+          "Name": "react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dom@18.3.1",
+            "UID": "bd58a28cf66e82a2",
+            "BOMRef": "52280bf5-4f26-422a-b88f-15fd87a91b4b"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "scheduler@0.23.2",
+            "loose-envify@1.4.0",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-dropzone@14.2.3",
+          "Name": "react-dropzone",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dropzone@14.2.3",
+            "UID": "cb28b9cdf1152e9",
+            "BOMRef": "pkg:npm/react-dropzone@14.2.3"
+          },
+          "Version": "14.2.3",
+          "DependsOn": [
+            "prop-types@15.8.1",
+            "react@18.3.1",
+            "attr-accept@2.2.2",
+            "file-selector@0.6.0"
+          ]
+        },
+        {
+          "ID": "react-error-boundary@4.0.13",
+          "Name": "react-error-boundary",
+          "Identifier": {
+            "PURL": "pkg:npm/react-error-boundary@4.0.13",
+            "UID": "3d51a47bb1a17270",
+            "BOMRef": "adb3d068-0749-46a5-a2d0-aff2c17d5608"
+          },
+          "Version": "4.0.13",
+          "DependsOn": [
+            "react@18.3.1",
+            "@babel/runtime@7.24.5"
+          ]
+        },
+        {
+          "ID": "react-hook-form@7.51.4",
+          "Name": "react-hook-form",
+          "Identifier": {
+            "PURL": "pkg:npm/react-hook-form@7.51.4",
+            "UID": "7e8b2ee49372b9ad",
+            "BOMRef": "1d94cd6f-524e-4ef1-9d77-dc8d957ddaee"
+          },
+          "Version": "7.51.4",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-i18next@14.1.1",
+          "Name": "react-i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/react-i18next@14.1.1",
+            "UID": "9c68c0116f2272c4",
+            "BOMRef": "8b30777f-916d-4c49-ab7a-dffb21ff694f"
+          },
+          "Version": "14.1.1",
+          "DependsOn": [
+            "i18next@23.11.4",
+            "html-parse-stringify@3.0.1",
+            "react@18.3.1",
+            "@babel/runtime@7.24.5"
+          ]
+        },
+        {
+          "ID": "react-is@16.13.1",
+          "Name": "react-is",
+          "Identifier": {
+            "PURL": "pkg:npm/react-is@16.13.1",
+            "UID": "b98a8c16404204e9",
+            "BOMRef": "9d2ce8a5-7775-417d-a762-d27fb0019ac4"
+          },
+          "Version": "16.13.1"
+        },
+        {
+          "ID": "react-onclickoutside@6.13.1",
+          "Name": "react-onclickoutside",
+          "Identifier": {
+            "PURL": "pkg:npm/react-onclickoutside@6.13.1",
+            "UID": "f55ea785463467e5",
+            "BOMRef": "c3cf99b1-8add-4041-9e3d-3d62a6295c32"
+          },
+          "Version": "6.13.1",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-paginate@8.2.0",
+          "Name": "react-paginate",
+          "Identifier": {
+            "PURL": "pkg:npm/react-paginate@8.2.0",
+            "UID": "10ce78d05e3018bf",
+            "BOMRef": "c3599968-d0ec-404b-b64f-7574e071a2dd"
+          },
+          "Version": "8.2.0",
+          "DependsOn": [
+            "prop-types@15.8.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-redux@9.1.2",
+          "Name": "react-redux",
+          "Identifier": {
+            "PURL": "pkg:npm/react-redux@9.1.2",
+            "UID": "d1dcefb0b0b2836b",
+            "BOMRef": "87a7b3e7-522d-4533-8943-b447e2b79bb2"
+          },
+          "Version": "9.1.2",
+          "DependsOn": [
+            "use-sync-external-store@1.2.2",
+            "@types/react@18.3.2",
+            "@types/use-sync-external-store@0.0.3",
+            "react@18.3.1",
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "react-router@6.23.1",
+          "Name": "react-router",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router@6.23.1",
+            "UID": "f114c409969bbe15",
+            "BOMRef": "9b38bdcb-6ca6-4790-a13f-106f3dfdaaae"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "@remix-run/router@1.16.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-router-dom@6.23.1",
+          "Name": "react-router-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router-dom@6.23.1",
+            "UID": "7685b2414400b369",
+            "BOMRef": "1b8b301b-5327-477d-ab6c-faa51805f5fb"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "@remix-run/router@1.16.1",
+            "react-router@6.23.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-spinners@0.13.8",
+          "Name": "react-spinners",
+          "Identifier": {
+            "PURL": "pkg:npm/react-spinners@0.13.8",
+            "UID": "712641f8290819ed",
+            "BOMRef": "382f182d-b5ef-475a-877a-2e599ccf71be"
+          },
+          "Version": "0.13.8",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-string-replace@1.1.1",
+          "Name": "react-string-replace",
+          "Identifier": {
+            "PURL": "pkg:npm/react-string-replace@1.1.1",
+            "UID": "9976ecad8922aba4",
+            "BOMRef": "4994c9ed-f8d8-4c0e-a916-880ae570cabc"
+          },
+          "Version": "1.1.1"
+        },
+        {
+          "ID": "redux@5.0.1",
+          "Name": "redux",
+          "Identifier": {
+            "PURL": "pkg:npm/redux@5.0.1",
+            "UID": "4ee61765d4bd4b00",
+            "BOMRef": "ff9fce37-e597-42ce-a1ab-efce79eeb76a"
+          },
+          "Version": "5.0.1"
+        },
+        {
+          "ID": "redux-thunk@3.1.0",
+          "Name": "redux-thunk",
+          "Identifier": {
+            "PURL": "pkg:npm/redux-thunk@3.1.0",
+            "UID": "9839c544c456c56c",
+            "BOMRef": "52926267-f33c-410c-a337-bb7fa296fc47"
+          },
+          "Version": "3.1.0",
+          "DependsOn": [
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "regenerator-runtime@0.14.1",
+          "Name": "regenerator-runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/regenerator-runtime@0.14.1",
+            "UID": "7aad6496d30d3084",
+            "BOMRef": "892d2439-b70e-43c6-8460-338cd2fd84ca"
+          },
+          "Version": "0.14.1"
+        },
+        {
+          "ID": "reselect@5.1.1",
+          "Name": "reselect",
+          "Identifier": {
+            "PURL": "pkg:npm/reselect@5.1.1",
+            "UID": "cee56b1902c4a455",
+            "BOMRef": "d48a94e8-224d-43e2-9fbd-c55af42efc31"
+          },
+          "Version": "5.1.1"
+        },
+        {
+          "ID": "scheduler@0.23.2",
+          "Name": "scheduler",
+          "Identifier": {
+            "PURL": "pkg:npm/scheduler@0.23.2",
+            "UID": "eafe6a9b222d545a",
+            "BOMRef": "32f7ab4f-ad8b-48c4-9cde-b91d711209bb"
+          },
+          "Version": "0.23.2",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "secomcloud-lib@1.0.0",
+          "Name": "secomcloud-lib",
+          "Identifier": {
+            "PURL": "pkg:npm/secomcloud-lib@1.0.0",
+            "UID": "940e51e43b62ff71",
+            "BOMRef": "a47b500c-561e-401b-b03d-ec7443f42172"
+          },
+          "Version": "1.0.0",
+          "DependsOn": [
+            "date-fns@3.6.0",
+            "react-router-dom@6.23.1",
+            "react-spinners@0.13.8",
+            "@reduxjs/toolkit@2.2.5",
+            "i18next@23.11.4",
+            "react-dom@18.3.1",
+            "react-redux@9.1.2",
+            "react-datepicker@6.9.0",
+            "react-router@6.23.1",
+            "clone@2.1.2",
+            "react-paginate@8.2.0",
+            "date-fns-tz@3.1.3",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "tabbable@6.2.0",
+          "Name": "tabbable",
+          "Identifier": {
+            "PURL": "pkg:npm/tabbable@6.2.0",
+            "UID": "20075933e821f68d",
+            "BOMRef": "65f18eb5-c652-451b-996c-260ad97fc1da"
+          },
+          "Version": "6.2.0"
+        },
+        {
+          "ID": "tiny-case@1.0.3",
+          "Name": "tiny-case",
+          "Identifier": {
+            "PURL": "pkg:npm/tiny-case@1.0.3",
+            "UID": "de3be6ae8e7c2b5a",
+            "BOMRef": "55ebd397-56c1-4e06-9d9f-c549f318e6f8"
+          },
+          "Version": "1.0.3"
+        },
+        {
+          "ID": "toposort@2.0.2",
+          "Name": "toposort",
+          "Identifier": {
+            "PURL": "pkg:npm/toposort@2.0.2",
+            "UID": "ea0f8375510fb3aa",
+            "BOMRef": "88cb45d2-b46b-449c-a17b-5662338d9545"
+          },
+          "Version": "2.0.2"
+        },
+        {
+          "ID": "tslib@2.6.3",
+          "Name": "tslib",
+          "Identifier": {
+            "PURL": "pkg:npm/tslib@2.6.3",
+            "UID": "2f17364b52b5841e",
+            "BOMRef": "ffa93f8b-7c88-4a84-84e0-4a37a9bc57c2"
+          },
+          "Version": "2.6.3"
+        },
+        {
+          "ID": "type-fest@2.19.0",
+          "Name": "type-fest",
+          "Identifier": {
+            "PURL": "pkg:npm/type-fest@2.19.0",
+            "UID": "4e2c6c145562f3fe",
+            "BOMRef": "2fd35dbb-a81f-4f5b-9234-0367b381733a"
+          },
+          "Version": "2.19.0"
+        },
+        {
+          "ID": "use-sync-external-store@1.2.2",
+          "Name": "use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/use-sync-external-store@1.2.2",
+            "UID": "5b2f27f8a32ad6ca",
+            "BOMRef": "2c9f3a9c-864d-459f-ae6b-66515b3716b7"
+          },
+          "Version": "1.2.2",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "void-elements@3.1.0",
+          "Name": "void-elements",
+          "Identifier": {
+            "PURL": "pkg:npm/void-elements@3.1.0",
+            "UID": "64a05ab64e10c073",
+            "BOMRef": "a80387f3-39b3-4fb7-8ca3-9d211e895224"
+          },
+          "Version": "3.1.0"
+        },
+        {
+          "ID": "yup@1.4.0",
+          "Name": "yup",
+          "Identifier": {
+            "PURL": "pkg:npm/yup@1.4.0",
+            "UID": "bf1a04b29e60a565",
+            "BOMRef": "3ad034b8-1c68-4663-9642-0f9ad4a1eea8"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "type-fest@2.19.0",
+            "property-expr@2.0.6",
+            "tiny-case@1.0.3",
+            "toposort@2.0.2"
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-22029",
+          "VendorIDs": [
+            "GHSA-2w69-qvjg-hvjx"
+          ],
+          "PkgID": "@remix-run/router@1.16.1",
+          "PkgName": "@remix-run/router",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "afd4985b95c33041",
+            "BOMRef": "5fb1f87e-6516-40bb-8afd-1f083c59e25a"
+          },
+          "InstalledVersion": "1.16.1",
+          "FixedVersion": "1.23.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-22029",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Fingerprint": "sha256:53eca1dbd41683d7813fe97ac95f3092bdb6efe14027812557e6b177f012a260",
+          "Title": "@remix-run/router: react-router: React Router vulnerable to XSS via Open Redirects",
+          "Description": "React Router is a router for React. In @remix-run/router version prior to 1.23.2. and react-router 7.0.0 through 7.11.0, React Router (and Remix v1/v2) SPA open navigation redirects originating from loaders or actions in Framework Mode, Data Mode, or the unstable RSC modes can result in unsafe URLs causing unintended javascript execution on the client. This is only an issue if you are creating redirect paths from untrusted content or via an open redirect. There is no impact if Declarative Mode (\u003cBrowserRouter\u003e) is being used. This issue has been patched in @remix-run/router version 1.23.2 and react-router version 7.12.0.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 2,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-22029",
+            "https://github.com/remix-run/react-router",
+            "https://github.com/remix-run/react-router/security/advisories/GHSA-2w69-qvjg-hvjx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-22029",
+            "https://www.cve.org/CVERecord?id=CVE-2026-22029"
+          ],
+          "PublishedDate": "2026-01-10T03:15:48.87Z",
+          "LastModifiedDate": "2026-02-10T19:36:31.503Z"
+        }
+      ]
+    },
+    {
+      "Target": "frontend/manager/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Packages": [
+        {
+          "ID": "@babel/runtime@7.24.5",
+          "Name": "@babel/runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/%40babel/runtime@7.24.5",
+            "UID": "144bdcd09c2b7eb8",
+            "BOMRef": "7a1c686d-aad0-41b4-8022-f9a432f8d784"
+          },
+          "Version": "7.24.5",
+          "DependsOn": [
+            "regenerator-runtime@0.14.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/core@1.6.2",
+          "Name": "@floating-ui/core",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/core@1.6.2",
+            "UID": "79c3a0956f6105f9",
+            "BOMRef": "c63ded6c-c385-4fa9-93cc-0beb5a069847"
+          },
+          "Version": "1.6.2",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/dom@1.6.5",
+          "Name": "@floating-ui/dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/dom@1.6.5",
+            "UID": "6e2aeddbafc583e3",
+            "BOMRef": "71febdd3-3863-452d-b922-6b9bc9cc346f"
+          },
+          "Version": "1.6.5",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2",
+            "@floating-ui/core@1.6.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react@0.26.17",
+          "Name": "@floating-ui/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react@0.26.17",
+            "UID": "c0ba38c788609ec7",
+            "BOMRef": "623a59ad-9204-46d9-8429-a6e5644ba26f"
+          },
+          "Version": "0.26.17",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2",
+            "react-dom@18.3.1",
+            "tabbable@6.2.0",
+            "@floating-ui/react-dom@2.1.0",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react-dom@2.1.0",
+          "Name": "@floating-ui/react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react-dom@2.1.0",
+            "UID": "463aab8961b52585",
+            "BOMRef": "a7154c21-9396-4256-be49-bdb1b07ea1c5"
+          },
+          "Version": "2.1.0",
+          "DependsOn": [
+            "@floating-ui/dom@1.6.5",
+            "react-dom@18.3.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/utils@0.2.2",
+          "Name": "@floating-ui/utils",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/utils@0.2.2",
+            "UID": "f52b48c40387eba6",
+            "BOMRef": "117009ed-341c-4436-b147-e2f7a15f559f"
+          },
+          "Version": "0.2.2"
+        },
+        {
+          "ID": "@reduxjs/toolkit@2.2.5",
+          "Name": "@reduxjs/toolkit",
+          "Identifier": {
+            "PURL": "pkg:npm/%40reduxjs/toolkit@2.2.5",
+            "UID": "cf03629f2c345573",
+            "BOMRef": "9c4fedf5-b5c9-4de3-a2fb-4202dbb84ab8"
+          },
+          "Version": "2.2.5",
+          "DependsOn": [
+            "reselect@5.1.1",
+            "redux@5.0.1",
+            "immer@10.1.1",
+            "redux-thunk@3.1.0",
+            "react@18.3.1",
+            "react-redux@9.1.2"
+          ]
+        },
+        {
+          "ID": "@remix-run/router@1.16.1",
+          "Name": "@remix-run/router",
+          "Identifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "23ca1c1aeb5e4258",
+            "BOMRef": "933dc1c8-d8c1-4e61-8d69-05734da49903"
+          },
+          "Version": "1.16.1"
+        },
+        {
+          "ID": "@types/prop-types@15.7.12",
+          "Name": "@types/prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/prop-types@15.7.12",
+            "UID": "c09777f2307e3218",
+            "BOMRef": "e9f36176-9165-4c66-9bc1-b7899a5aba4d"
+          },
+          "Version": "15.7.12"
+        },
+        {
+          "ID": "@types/react@18.3.2",
+          "Name": "@types/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react@18.3.2",
+            "UID": "c7973410164894e9",
+            "BOMRef": "14b7cfa2-cf19-48ce-8c11-b9c65ec7b947"
+          },
+          "Version": "18.3.2",
+          "DependsOn": [
+            "csstype@3.1.3",
+            "@types/prop-types@15.7.12"
+          ]
+        },
+        {
+          "ID": "@types/react-tag-autocomplete@5.12.6",
+          "Name": "@types/react-tag-autocomplete",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react-tag-autocomplete@5.12.6",
+            "UID": "b59757b0bf451933",
+            "BOMRef": "pkg:npm/%40types/react-tag-autocomplete@5.12.6"
+          },
+          "Version": "5.12.6",
+          "DependsOn": [
+            "@types/react@18.3.2"
+          ]
+        },
+        {
+          "ID": "@types/use-sync-external-store@0.0.3",
+          "Name": "@types/use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/use-sync-external-store@0.0.3",
+            "UID": "74d9afc621f77cd0",
+            "BOMRef": "b56b7c74-4841-496f-8acd-50326c659128"
+          },
+          "Version": "0.0.3"
+        },
+        {
+          "ID": "clone@2.1.2",
+          "Name": "clone",
+          "Identifier": {
+            "PURL": "pkg:npm/clone@2.1.2",
+            "UID": "74ad7787f3c36076",
+            "BOMRef": "a19adba7-26c8-4631-a8e4-a01238a0aa27"
+          },
+          "Version": "2.1.2"
+        },
+        {
+          "ID": "clsx@2.1.1",
+          "Name": "clsx",
+          "Identifier": {
+            "PURL": "pkg:npm/clsx@2.1.1",
+            "UID": "b071937cfc288aff",
+            "BOMRef": "de8b2f59-9eb7-4b7a-9b93-f6d73afb2bea"
+          },
+          "Version": "2.1.1"
+        },
+        {
+          "ID": "csstype@3.1.3",
+          "Name": "csstype",
+          "Identifier": {
+            "PURL": "pkg:npm/csstype@3.1.3",
+            "UID": "d774b3ddfab35879",
+            "BOMRef": "3baf1183-b73f-40e7-b8cd-0ef0dd362cad"
+          },
+          "Version": "3.1.3"
+        },
+        {
+          "ID": "date-fns@3.6.0",
+          "Name": "date-fns",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns@3.6.0",
+            "UID": "9ae12840b9f8d365",
+            "BOMRef": "98715ba5-80ed-445f-8721-ed840b4ed471"
+          },
+          "Version": "3.6.0"
+        },
+        {
+          "ID": "date-fns-tz@3.1.3",
+          "Name": "date-fns-tz",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns-tz@3.1.3",
+            "UID": "8cf473e161dc1f72",
+            "BOMRef": "80b8195c-d5e8-4fee-b7bc-c34d00004593"
+          },
+          "Version": "3.1.3",
+          "DependsOn": [
+            "date-fns@3.6.0"
+          ]
+        },
+        {
+          "ID": "dotenv@8.6.0",
+          "Name": "dotenv",
+          "Identifier": {
+            "PURL": "pkg:npm/dotenv@8.6.0",
+            "UID": "43eaedfce36d5035",
+            "BOMRef": "pkg:npm/dotenv@8.6.0"
+          },
+          "Version": "8.6.0"
+        },
+        {
+          "ID": "es6-promise@4.2.8",
+          "Name": "es6-promise",
+          "Identifier": {
+            "PURL": "pkg:npm/es6-promise@4.2.8",
+            "UID": "cea7a5e458f81b7c",
+            "BOMRef": "pkg:npm/es6-promise@4.2.8"
+          },
+          "Version": "4.2.8"
+        },
+        {
+          "ID": "html-attributes@1.1.0",
+          "Name": "html-attributes",
+          "Identifier": {
+            "PURL": "pkg:npm/html-attributes@1.1.0",
+            "UID": "4058fc9263ce92de",
+            "BOMRef": "pkg:npm/html-attributes@1.1.0"
+          },
+          "Version": "1.1.0"
+        },
+        {
+          "ID": "html-parse-stringify@3.0.1",
+          "Name": "html-parse-stringify",
+          "Identifier": {
+            "PURL": "pkg:npm/html-parse-stringify@3.0.1",
+            "UID": "194744f5279209c3",
+            "BOMRef": "1e681b2b-652c-4c7c-9ae9-a11801e25d94"
+          },
+          "Version": "3.0.1",
+          "DependsOn": [
+            "void-elements@3.1.0"
+          ]
+        },
+        {
+          "ID": "i18next@23.11.4",
+          "Name": "i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/i18next@23.11.4",
+            "UID": "e52216ba289fe7e3",
+            "BOMRef": "d5dcf9d9-e076-4ca9-9ab2-e8e6d6f922b2"
+          },
+          "Version": "23.11.4",
+          "DependsOn": [
+            "@babel/runtime@7.24.5"
+          ]
+        },
+        {
+          "ID": "immer@10.1.1",
+          "Name": "immer",
+          "Identifier": {
+            "PURL": "pkg:npm/immer@10.1.1",
+            "UID": "b7436cb7a3dd9112",
+            "BOMRef": "6dfc44f1-07c3-473d-bbf5-fbfed30ec515"
+          },
+          "Version": "10.1.1"
+        },
+        {
+          "ID": "js-tokens@4.0.0",
+          "Name": "js-tokens",
+          "Identifier": {
+            "PURL": "pkg:npm/js-tokens@4.0.0",
+            "UID": "5a22ae3f18e30d54",
+            "BOMRef": "190afb14-d71e-4741-a7d4-78f0b44eb563"
+          },
+          "Version": "4.0.0"
+        },
+        {
+          "ID": "lodash.clonedeep@4.5.0",
+          "Name": "lodash.clonedeep",
+          "Identifier": {
+            "PURL": "pkg:npm/lodash.clonedeep@4.5.0",
+            "UID": "58ef9d578d6dd802",
+            "BOMRef": "4537e3d2-cc7a-4132-ac1a-480d8f44beef"
+          },
+          "Version": "4.5.0"
+        },
+        {
+          "ID": "lodash.isplainobject@4.0.6",
+          "Name": "lodash.isplainobject",
+          "Identifier": {
+            "PURL": "pkg:npm/lodash.isplainobject@4.0.6",
+            "UID": "199197c3e4ae883a",
+            "BOMRef": "pkg:npm/lodash.isplainobject@4.0.6"
+          },
+          "Version": "4.0.6"
+        },
+        {
+          "ID": "loose-envify@1.4.0",
+          "Name": "loose-envify",
+          "Identifier": {
+            "PURL": "pkg:npm/loose-envify@1.4.0",
+            "UID": "24e93e783a54ca16",
+            "BOMRef": "a9d447f4-670f-4bc5-801d-758d7ca85108"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "js-tokens@4.0.0"
+          ]
+        },
+        {
+          "ID": "object-assign@4.1.1",
+          "Name": "object-assign",
+          "Identifier": {
+            "PURL": "pkg:npm/object-assign@4.1.1",
+            "UID": "df354c34fa5e2aa8",
+            "BOMRef": "b5895879-5082-4398-9a45-41f71fc39480"
+          },
+          "Version": "4.1.1"
+        },
+        {
+          "ID": "pick-react-known-prop@0.1.5",
+          "Name": "pick-react-known-prop",
+          "Identifier": {
+            "PURL": "pkg:npm/pick-react-known-prop@0.1.5",
+            "UID": "25dddcf37440e16f",
+            "BOMRef": "pkg:npm/pick-react-known-prop@0.1.5"
+          },
+          "Version": "0.1.5",
+          "DependsOn": [
+            "html-attributes@1.1.0",
+            "lodash.isplainobject@4.0.6",
+            "svg-attributes@1.0.0"
+          ]
+        },
+        {
+          "ID": "prop-types@15.8.1",
+          "Name": "prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/prop-types@15.8.1",
+            "UID": "52b1e2b427d14840",
+            "BOMRef": "c7f6d98b-3474-47ad-958a-7c2998dfc728"
+          },
+          "Version": "15.8.1",
+          "DependsOn": [
+            "react-is@16.13.1",
+            "loose-envify@1.4.0",
+            "object-assign@4.1.1"
+          ]
+        },
+        {
+          "ID": "property-expr@2.0.6",
+          "Name": "property-expr",
+          "Identifier": {
+            "PURL": "pkg:npm/property-expr@2.0.6",
+            "UID": "3df22e7a3b24c0ad",
+            "BOMRef": "d3e28c06-11cf-4166-8742-cd8ee7010b33"
+          },
+          "Version": "2.0.6"
+        },
+        {
+          "ID": "react@18.3.1",
+          "Name": "react",
+          "Identifier": {
+            "PURL": "pkg:npm/react@18.3.1",
+            "UID": "5905d9c0e7971c98",
+            "BOMRef": "cdd7309d-ab56-4a60-b24a-67d00e79eb71"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "react-datepicker@6.9.0",
+          "Name": "react-datepicker",
+          "Identifier": {
+            "PURL": "pkg:npm/react-datepicker@6.9.0",
+            "UID": "e40e6a5a28e9c43f",
+            "BOMRef": "271adf7a-133e-4b50-9f5d-9694583f6b6f"
+          },
+          "Version": "6.9.0",
+          "DependsOn": [
+            "react-onclickoutside@6.13.1",
+            "@floating-ui/react@0.26.17",
+            "date-fns@3.6.0",
+            "react-dom@18.3.1",
+            "prop-types@15.8.1",
+            "react@18.3.1",
+            "clsx@2.1.1"
+          ]
+        },
+        {
+          "ID": "react-dom@18.3.1",
+          "Name": "react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dom@18.3.1",
+            "UID": "d18fe57bea372e7e",
+            "BOMRef": "a23bced5-7aab-489b-a4d6-269c3ec6674e"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "scheduler@0.23.2",
+            "loose-envify@1.4.0",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-error-boundary@4.0.13",
+          "Name": "react-error-boundary",
+          "Identifier": {
+            "PURL": "pkg:npm/react-error-boundary@4.0.13",
+            "UID": "889cace7a551c40",
+            "BOMRef": "5c954c83-a258-40c0-b763-16f127e88134"
+          },
+          "Version": "4.0.13",
+          "DependsOn": [
+            "@babel/runtime@7.24.5",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-hook-form@7.51.4",
+          "Name": "react-hook-form",
+          "Identifier": {
+            "PURL": "pkg:npm/react-hook-form@7.51.4",
+            "UID": "2b6d331ddab34442",
+            "BOMRef": "2067c19b-2e98-4c02-a222-366f8710c145"
+          },
+          "Version": "7.51.4",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-i18next@14.1.1",
+          "Name": "react-i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/react-i18next@14.1.1",
+            "UID": "91e8a4fa4c2899d0",
+            "BOMRef": "9ed5d1c3-bfd0-4d74-a7ae-6d0b9d03bed7"
+          },
+          "Version": "14.1.1",
+          "DependsOn": [
+            "html-parse-stringify@3.0.1",
+            "@babel/runtime@7.24.5",
+            "react@18.3.1",
+            "i18next@23.11.4"
+          ]
+        },
+        {
+          "ID": "react-is@16.13.1",
+          "Name": "react-is",
+          "Identifier": {
+            "PURL": "pkg:npm/react-is@16.13.1",
+            "UID": "53beed28145f8b4f",
+            "BOMRef": "70cc0593-f233-4f17-83c0-3e03b8511d84"
+          },
+          "Version": "16.13.1"
+        },
+        {
+          "ID": "react-onclickoutside@6.13.1",
+          "Name": "react-onclickoutside",
+          "Identifier": {
+            "PURL": "pkg:npm/react-onclickoutside@6.13.1",
+            "UID": "b33128ca868be7eb",
+            "BOMRef": "398cc131-ef97-4c02-9bae-488bc811e33d"
+          },
+          "Version": "6.13.1",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-paginate@8.2.0",
+          "Name": "react-paginate",
+          "Identifier": {
+            "PURL": "pkg:npm/react-paginate@8.2.0",
+            "UID": "dfd6c84bde342b37",
+            "BOMRef": "5c322042-ae29-4b8f-b777-8a6cd244c16e"
+          },
+          "Version": "8.2.0",
+          "DependsOn": [
+            "prop-types@15.8.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-redux@9.1.2",
+          "Name": "react-redux",
+          "Identifier": {
+            "PURL": "pkg:npm/react-redux@9.1.2",
+            "UID": "ad7cbfb17a2455a6",
+            "BOMRef": "faf41513-e3ca-4138-ac78-a38310633988"
+          },
+          "Version": "9.1.2",
+          "DependsOn": [
+            "@types/react@18.3.2",
+            "redux@5.0.1",
+            "use-sync-external-store@1.2.2",
+            "@types/use-sync-external-store@0.0.3",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-router@6.23.1",
+          "Name": "react-router",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router@6.23.1",
+            "UID": "4909a8a8775abc09",
+            "BOMRef": "f55451b3-8609-4c48-8995-8220bdab98d9"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "@remix-run/router@1.16.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-router-dom@6.23.1",
+          "Name": "react-router-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router-dom@6.23.1",
+            "UID": "3ac630bc24373661",
+            "BOMRef": "bf457d0e-2514-43f2-bc88-945eb2c160d5"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "@remix-run/router@1.16.1",
+            "react-dom@18.3.1",
+            "react@18.3.1",
+            "react-router@6.23.1"
+          ]
+        },
+        {
+          "ID": "react-spinners@0.13.8",
+          "Name": "react-spinners",
+          "Identifier": {
+            "PURL": "pkg:npm/react-spinners@0.13.8",
+            "UID": "57d6f362928e88",
+            "BOMRef": "47a39b4a-3671-42c2-aa9a-8d3560e301cb"
+          },
+          "Version": "0.13.8",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-string-replace@1.1.1",
+          "Name": "react-string-replace",
+          "Identifier": {
+            "PURL": "pkg:npm/react-string-replace@1.1.1",
+            "UID": "8515cb640dd8f3a6",
+            "BOMRef": "19f5efcb-3a62-45b9-8b54-67bd1b966574"
+          },
+          "Version": "1.1.1"
+        },
+        {
+          "ID": "react-tabulator@0.15.0",
+          "Name": "react-tabulator",
+          "Identifier": {
+            "PURL": "pkg:npm/react-tabulator@0.15.0",
+            "UID": "de8d07670e6704a6",
+            "BOMRef": "pkg:npm/react-tabulator@0.15.0"
+          },
+          "Version": "0.15.0",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react@18.3.1",
+            "@types/react-tag-autocomplete@5.12.6",
+            "dotenv@8.6.0",
+            "es6-promise@4.2.8",
+            "pick-react-known-prop@0.1.5",
+            "react-tag-autocomplete@7.2.0",
+            "tabulator-tables@4.9.3"
+          ]
+        },
+        {
+          "ID": "react-tag-autocomplete@7.2.0",
+          "Name": "react-tag-autocomplete",
+          "Identifier": {
+            "PURL": "pkg:npm/react-tag-autocomplete@7.2.0",
+            "UID": "e1753feeb5dda55f",
+            "BOMRef": "pkg:npm/react-tag-autocomplete@7.2.0"
+          },
+          "Version": "7.2.0",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "redux@5.0.1",
+          "Name": "redux",
+          "Identifier": {
+            "PURL": "pkg:npm/redux@5.0.1",
+            "UID": "695d00b75eb5b585",
+            "BOMRef": "47e79d2d-ee52-443f-aba6-9c561c571ea9"
+          },
+          "Version": "5.0.1"
+        },
+        {
+          "ID": "redux-thunk@3.1.0",
+          "Name": "redux-thunk",
+          "Identifier": {
+            "PURL": "pkg:npm/redux-thunk@3.1.0",
+            "UID": "c5970d64ef9c6090",
+            "BOMRef": "97031a3d-f2bf-4fa7-bd02-c5b523082bd2"
+          },
+          "Version": "3.1.0",
+          "DependsOn": [
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "regenerator-runtime@0.14.1",
+          "Name": "regenerator-runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/regenerator-runtime@0.14.1",
+            "UID": "6b78ad2451d83af4",
+            "BOMRef": "d35508a5-7567-42cc-bf00-b300880728f4"
+          },
+          "Version": "0.14.1"
+        },
+        {
+          "ID": "reselect@5.1.1",
+          "Name": "reselect",
+          "Identifier": {
+            "PURL": "pkg:npm/reselect@5.1.1",
+            "UID": "e419b258f08a274c",
+            "BOMRef": "14c1a795-5354-429b-9151-02c5a55b88f8"
+          },
+          "Version": "5.1.1"
+        },
+        {
+          "ID": "scheduler@0.23.2",
+          "Name": "scheduler",
+          "Identifier": {
+            "PURL": "pkg:npm/scheduler@0.23.2",
+            "UID": "ffe033e1e9d12473",
+            "BOMRef": "7a43d486-2efe-4eac-8794-d6101811bfbd"
+          },
+          "Version": "0.23.2",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "secomcloud-lib@1.0.0",
+          "Name": "secomcloud-lib",
+          "Identifier": {
+            "PURL": "pkg:npm/secomcloud-lib@1.0.0",
+            "UID": "e6d3daf3fa05262f",
+            "BOMRef": "13812296-7011-46e7-8a89-7cb510f5478d"
+          },
+          "Version": "1.0.0",
+          "DependsOn": [
+            "react-datepicker@6.9.0",
+            "react-spinners@0.13.8",
+            "react-paginate@8.2.0",
+            "date-fns-tz@3.1.3",
+            "date-fns@3.6.0",
+            "@reduxjs/toolkit@2.2.5",
+            "clone@2.1.2",
+            "react-dom@18.3.1",
+            "react-router-dom@6.23.1",
+            "react@18.3.1",
+            "i18next@23.11.4",
+            "react-router@6.23.1",
+            "react-redux@9.1.2"
+          ]
+        },
+        {
+          "ID": "svg-attributes@1.0.0",
+          "Name": "svg-attributes",
+          "Identifier": {
+            "PURL": "pkg:npm/svg-attributes@1.0.0",
+            "UID": "b8060896fa7e25c5",
+            "BOMRef": "pkg:npm/svg-attributes@1.0.0"
+          },
+          "Version": "1.0.0"
+        },
+        {
+          "ID": "tabbable@6.2.0",
+          "Name": "tabbable",
+          "Identifier": {
+            "PURL": "pkg:npm/tabbable@6.2.0",
+            "UID": "784b8d776c2f941c",
+            "BOMRef": "a5cd9225-c3b9-49dd-98e9-47eaf1a7e674"
+          },
+          "Version": "6.2.0"
+        },
+        {
+          "ID": "tabulator-tables@4.9.3",
+          "Name": "tabulator-tables",
+          "Identifier": {
+            "PURL": "pkg:npm/tabulator-tables@4.9.3",
+            "UID": "19b6d3191fb3bb98",
+            "BOMRef": "pkg:npm/tabulator-tables@4.9.3"
+          },
+          "Version": "4.9.3"
+        },
+        {
+          "ID": "tiny-case@1.0.3",
+          "Name": "tiny-case",
+          "Identifier": {
+            "PURL": "pkg:npm/tiny-case@1.0.3",
+            "UID": "4044186852637489",
+            "BOMRef": "9dc5182f-36d2-475d-89b7-978175d9f815"
+          },
+          "Version": "1.0.3"
+        },
+        {
+          "ID": "toposort@2.0.2",
+          "Name": "toposort",
+          "Identifier": {
+            "PURL": "pkg:npm/toposort@2.0.2",
+            "UID": "af42f161a6fa99a4",
+            "BOMRef": "2e8e6970-74d5-4ad2-8388-610b753f82f3"
+          },
+          "Version": "2.0.2"
+        },
+        {
+          "ID": "type-fest@2.19.0",
+          "Name": "type-fest",
+          "Identifier": {
+            "PURL": "pkg:npm/type-fest@2.19.0",
+            "UID": "53f52df0f387a4a5",
+            "BOMRef": "a0a9a279-d408-4dc6-810e-e99d8270f8cb"
+          },
+          "Version": "2.19.0"
+        },
+        {
+          "ID": "use-sync-external-store@1.2.2",
+          "Name": "use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/use-sync-external-store@1.2.2",
+            "UID": "2b36fe781ac757b8",
+            "BOMRef": "9301bf44-a410-43d5-94b8-35a1931f4857"
+          },
+          "Version": "1.2.2",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "void-elements@3.1.0",
+          "Name": "void-elements",
+          "Identifier": {
+            "PURL": "pkg:npm/void-elements@3.1.0",
+            "UID": "592469e806a6c57d",
+            "BOMRef": "fe910042-ebd3-4746-8212-8bed737baa9c"
+          },
+          "Version": "3.1.0"
+        },
+        {
+          "ID": "yup@1.4.0",
+          "Name": "yup",
+          "Identifier": {
+            "PURL": "pkg:npm/yup@1.4.0",
+            "UID": "6f4289a1cd8f5941",
+            "BOMRef": "ed90292f-7c8b-44f7-8324-e66c3310438e"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "toposort@2.0.2",
+            "tiny-case@1.0.3",
+            "type-fest@2.19.0",
+            "property-expr@2.0.6"
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-22029",
+          "VendorIDs": [
+            "GHSA-2w69-qvjg-hvjx"
+          ],
+          "PkgID": "@remix-run/router@1.16.1",
+          "PkgName": "@remix-run/router",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "23ca1c1aeb5e4258",
+            "BOMRef": "933dc1c8-d8c1-4e61-8d69-05734da49903"
+          },
+          "InstalledVersion": "1.16.1",
+          "FixedVersion": "1.23.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-22029",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Fingerprint": "sha256:e30260c702648683f377914c34fb860395865db4f582ada85f8c01c2e1eb4375",
+          "Title": "@remix-run/router: react-router: React Router vulnerable to XSS via Open Redirects",
+          "Description": "React Router is a router for React. In @remix-run/router version prior to 1.23.2. and react-router 7.0.0 through 7.11.0, React Router (and Remix v1/v2) SPA open navigation redirects originating from loaders or actions in Framework Mode, Data Mode, or the unstable RSC modes can result in unsafe URLs causing unintended javascript execution on the client. This is only an issue if you are creating redirect paths from untrusted content or via an open redirect. There is no impact if Declarative Mode (\u003cBrowserRouter\u003e) is being used. This issue has been patched in @remix-run/router version 1.23.2 and react-router version 7.12.0.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 2,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-22029",
+            "https://github.com/remix-run/react-router",
+            "https://github.com/remix-run/react-router/security/advisories/GHSA-2w69-qvjg-hvjx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-22029",
+            "https://www.cve.org/CVERecord?id=CVE-2026-22029"
+          ],
+          "PublishedDate": "2026-01-10T03:15:48.87Z",
+          "LastModifiedDate": "2026-02-10T19:36:31.503Z"
+        }
+      ]
+    },
+    {
+      "Target": "frontend/secomcloud-lib/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Packages": [
+        {
+          "ID": "@babel/runtime@7.24.5",
+          "Name": "@babel/runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/%40babel/runtime@7.24.5",
+            "UID": "cad11148d0d064bb",
+            "BOMRef": "96aef9b8-66ec-4194-ac76-62008a034620"
+          },
+          "Version": "7.24.5",
+          "DependsOn": [
+            "regenerator-runtime@0.14.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/core@1.6.2",
+          "Name": "@floating-ui/core",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/core@1.6.2",
+            "UID": "92f7dabe74d2cf1c",
+            "BOMRef": "50d063b5-d85e-44fc-a362-88678587ba68"
+          },
+          "Version": "1.6.2",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/dom@1.6.5",
+          "Name": "@floating-ui/dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/dom@1.6.5",
+            "UID": "b84c2be23e0dc89f",
+            "BOMRef": "fe660e01-0efa-4261-a929-7ad059bc25e4"
+          },
+          "Version": "1.6.5",
+          "DependsOn": [
+            "@floating-ui/core@1.6.2",
+            "@floating-ui/utils@0.2.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react@0.26.15",
+          "Name": "@floating-ui/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react@0.26.15",
+            "UID": "d92fcf592d108615",
+            "BOMRef": "pkg:npm/%40floating-ui/react@0.26.15"
+          },
+          "Version": "0.26.15",
+          "DependsOn": [
+            "react@18.3.1",
+            "tabbable@6.2.0",
+            "@floating-ui/utils@0.2.2",
+            "react-dom@18.3.1",
+            "@floating-ui/react-dom@2.0.9"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react-dom@2.0.9",
+          "Name": "@floating-ui/react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react-dom@2.0.9",
+            "UID": "e9a3a263e46a29ca",
+            "BOMRef": "pkg:npm/%40floating-ui/react-dom@2.0.9"
+          },
+          "Version": "2.0.9",
+          "DependsOn": [
+            "react@18.3.1",
+            "react-dom@18.3.1",
+            "@floating-ui/dom@1.6.5"
+          ]
+        },
+        {
+          "ID": "@floating-ui/utils@0.2.2",
+          "Name": "@floating-ui/utils",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/utils@0.2.2",
+            "UID": "745fc49e05d46110",
+            "BOMRef": "64f22129-4f62-4b26-925a-247af544fb3c"
+          },
+          "Version": "0.2.2"
+        },
+        {
+          "ID": "@reduxjs/toolkit@2.2.5",
+          "Name": "@reduxjs/toolkit",
+          "Identifier": {
+            "PURL": "pkg:npm/%40reduxjs/toolkit@2.2.5",
+            "UID": "43ad3e0a12d1de90",
+            "BOMRef": "b465980a-3b6f-4024-b0ae-744eba7b198e"
+          },
+          "Version": "2.2.5",
+          "DependsOn": [
+            "react@18.3.1",
+            "redux-thunk@3.1.0",
+            "immer@10.1.1",
+            "react-redux@9.1.2",
+            "redux@5.0.1",
+            "reselect@5.1.0"
+          ]
+        },
+        {
+          "ID": "@remix-run/router@1.16.1",
+          "Name": "@remix-run/router",
+          "Identifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "f325fa2b12bf2554",
+            "BOMRef": "477f2503-8686-4a64-9117-9a82a5041cec"
+          },
+          "Version": "1.16.1"
+        },
+        {
+          "ID": "@types/prop-types@15.7.12",
+          "Name": "@types/prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/prop-types@15.7.12",
+            "UID": "8efb1739f4402337",
+            "BOMRef": "4fa5efcb-94c7-43bb-b321-6df9bf89a720"
+          },
+          "Version": "15.7.12"
+        },
+        {
+          "ID": "@types/react@18.3.2",
+          "Name": "@types/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react@18.3.2",
+            "UID": "b6483c7dbeb0011",
+            "BOMRef": "c2e875fd-6414-4305-bc26-cf6b76a92bd5"
+          },
+          "Version": "18.3.2",
+          "DependsOn": [
+            "@types/prop-types@15.7.12",
+            "csstype@3.1.3"
+          ]
+        },
+        {
+          "ID": "@types/use-sync-external-store@0.0.3",
+          "Name": "@types/use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/use-sync-external-store@0.0.3",
+            "UID": "6b9b3a95060f178d",
+            "BOMRef": "ef9e4d83-21bd-4bf2-b441-aa0709385bdb"
+          },
+          "Version": "0.0.3"
+        },
+        {
+          "ID": "clone@2.1.2",
+          "Name": "clone",
+          "Identifier": {
+            "PURL": "pkg:npm/clone@2.1.2",
+            "UID": "34f2d6a36f59707",
+            "BOMRef": "d51a4bbe-f9c1-4e7a-b1b0-29f69816b294"
+          },
+          "Version": "2.1.2"
+        },
+        {
+          "ID": "clsx@2.1.1",
+          "Name": "clsx",
+          "Identifier": {
+            "PURL": "pkg:npm/clsx@2.1.1",
+            "UID": "84bbbb434615a7c4",
+            "BOMRef": "9b971f20-297d-4b8e-8c8b-6976275eb537"
+          },
+          "Version": "2.1.1"
+        },
+        {
+          "ID": "csstype@3.1.3",
+          "Name": "csstype",
+          "Identifier": {
+            "PURL": "pkg:npm/csstype@3.1.3",
+            "UID": "cdbfe51ba8083e81",
+            "BOMRef": "f990aade-4f89-441c-ae33-322d08099d6f"
+          },
+          "Version": "3.1.3"
+        },
+        {
+          "ID": "date-fns@3.6.0",
+          "Name": "date-fns",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns@3.6.0",
+            "UID": "6ac75be6cdd7a16",
+            "BOMRef": "ee85c945-5043-47ea-b49e-637c57a8a067"
+          },
+          "Version": "3.6.0"
+        },
+        {
+          "ID": "date-fns-tz@3.1.3",
+          "Name": "date-fns-tz",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns-tz@3.1.3",
+            "UID": "c76f007f9dd7f765",
+            "BOMRef": "0db28802-0e2d-44a3-b840-04cdbe714448"
+          },
+          "Version": "3.1.3",
+          "DependsOn": [
+            "date-fns@3.6.0"
+          ]
+        },
+        {
+          "ID": "i18next@23.11.4",
+          "Name": "i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/i18next@23.11.4",
+            "UID": "e2acaaf43d64f3ad",
+            "BOMRef": "108c6941-6db1-4079-95c4-8a962611ebc2"
+          },
+          "Version": "23.11.4",
+          "DependsOn": [
+            "@babel/runtime@7.24.5"
+          ]
+        },
+        {
+          "ID": "immer@10.1.1",
+          "Name": "immer",
+          "Identifier": {
+            "PURL": "pkg:npm/immer@10.1.1",
+            "UID": "b271871acb3a9811",
+            "BOMRef": "7e348489-9d9e-4f99-905d-4e7fa9db821e"
+          },
+          "Version": "10.1.1"
+        },
+        {
+          "ID": "js-tokens@4.0.0",
+          "Name": "js-tokens",
+          "Identifier": {
+            "PURL": "pkg:npm/js-tokens@4.0.0",
+            "UID": "a3650de2579b0cd9",
+            "BOMRef": "dc0e53e8-30bc-4446-8e3c-8373390d46d9"
+          },
+          "Version": "4.0.0"
+        },
+        {
+          "ID": "loose-envify@1.4.0",
+          "Name": "loose-envify",
+          "Identifier": {
+            "PURL": "pkg:npm/loose-envify@1.4.0",
+            "UID": "7664970217373793",
+            "BOMRef": "f2dff9b3-8fff-4618-b99d-6a797edd377a"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "js-tokens@4.0.0"
+          ]
+        },
+        {
+          "ID": "object-assign@4.1.1",
+          "Name": "object-assign",
+          "Identifier": {
+            "PURL": "pkg:npm/object-assign@4.1.1",
+            "UID": "ff8fc26912c8de5f",
+            "BOMRef": "4b2b733d-973a-4c35-9717-196fea061cff"
+          },
+          "Version": "4.1.1"
+        },
+        {
+          "ID": "prop-types@15.8.1",
+          "Name": "prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/prop-types@15.8.1",
+            "UID": "ed2238c94990344a",
+            "BOMRef": "d26ee596-c8fe-4209-8f6a-575969fa8367"
+          },
+          "Version": "15.8.1",
+          "DependsOn": [
+            "object-assign@4.1.1",
+            "loose-envify@1.4.0",
+            "react-is@16.13.1"
+          ]
+        },
+        {
+          "ID": "react@18.3.1",
+          "Name": "react",
+          "Identifier": {
+            "PURL": "pkg:npm/react@18.3.1",
+            "UID": "d2a3187c6877c084",
+            "BOMRef": "2e6a71f9-703c-4ef9-a614-07cfc4786d82"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "react-datepicker@6.9.0",
+          "Name": "react-datepicker",
+          "Identifier": {
+            "PURL": "pkg:npm/react-datepicker@6.9.0",
+            "UID": "17874891e8147782",
+            "BOMRef": "d27872a6-7fdc-4f46-bcc1-96944eeebb49"
+          },
+          "Version": "6.9.0",
+          "DependsOn": [
+            "react@18.3.1",
+            "clsx@2.1.1",
+            "react-onclickoutside@6.13.1",
+            "react-dom@18.3.1",
+            "prop-types@15.8.1",
+            "date-fns@3.6.0",
+            "@floating-ui/react@0.26.15"
+          ]
+        },
+        {
+          "ID": "react-dom@18.3.1",
+          "Name": "react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dom@18.3.1",
+            "UID": "99b8e72e5cd0f127",
+            "BOMRef": "ca35cd4e-8c21-4b8d-88c6-4c7d6aca28a6"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "scheduler@0.23.2",
+            "react@18.3.1",
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "react-is@16.13.1",
+          "Name": "react-is",
+          "Identifier": {
+            "PURL": "pkg:npm/react-is@16.13.1",
+            "UID": "9384537efd607c4d",
+            "BOMRef": "f71eef99-3864-4306-b201-f9a31fb3b28d"
+          },
+          "Version": "16.13.1"
+        },
+        {
+          "ID": "react-onclickoutside@6.13.1",
+          "Name": "react-onclickoutside",
+          "Identifier": {
+            "PURL": "pkg:npm/react-onclickoutside@6.13.1",
+            "UID": "2e1f2bd4ee1e3656",
+            "BOMRef": "b4b384b7-9382-4a32-91ad-8413df721575"
+          },
+          "Version": "6.13.1",
+          "DependsOn": [
+            "react@18.3.1",
+            "react-dom@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-paginate@8.2.0",
+          "Name": "react-paginate",
+          "Identifier": {
+            "PURL": "pkg:npm/react-paginate@8.2.0",
+            "UID": "8ff751a4713a610f",
+            "BOMRef": "ca6779a2-783d-4f6c-b438-2308e42700e6"
+          },
+          "Version": "8.2.0",
+          "DependsOn": [
+            "react@18.3.1",
+            "prop-types@15.8.1"
+          ]
+        },
+        {
+          "ID": "react-redux@9.1.2",
+          "Name": "react-redux",
+          "Identifier": {
+            "PURL": "pkg:npm/react-redux@9.1.2",
+            "UID": "fbcf9d5d7c753cef",
+            "BOMRef": "afb5a63b-f9d8-4c0d-85fe-5011fff54056"
+          },
+          "Version": "9.1.2",
+          "DependsOn": [
+            "react@18.3.1",
+            "use-sync-external-store@1.2.2",
+            "@types/react@18.3.2",
+            "@types/use-sync-external-store@0.0.3",
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "react-router@6.23.1",
+          "Name": "react-router",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router@6.23.1",
+            "UID": "bab843c886bccb36",
+            "BOMRef": "3be7fb9d-67a1-4585-bc3f-ea73b5b43a90"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "react@18.3.1",
+            "@remix-run/router@1.16.1"
+          ]
+        },
+        {
+          "ID": "react-router-dom@6.23.1",
+          "Name": "react-router-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router-dom@6.23.1",
+            "UID": "54c2d9f3c965247a",
+            "BOMRef": "3a11de68-a7b1-4e24-80d2-4d7ab3a2adb5"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "react@18.3.1",
+            "react-router@6.23.1",
+            "@remix-run/router@1.16.1",
+            "react-dom@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-spinners@0.13.8",
+          "Name": "react-spinners",
+          "Identifier": {
+            "PURL": "pkg:npm/react-spinners@0.13.8",
+            "UID": "f082b4a42682f554",
+            "BOMRef": "071b549d-e3a2-46b1-a2b6-b25b39842622"
+          },
+          "Version": "0.13.8",
+          "DependsOn": [
+            "react@18.3.1",
+            "react-dom@18.3.1"
+          ]
+        },
+        {
+          "ID": "redux@5.0.1",
+          "Name": "redux",
+          "Identifier": {
+            "PURL": "pkg:npm/redux@5.0.1",
+            "UID": "19b77d5d05ceea24",
+            "BOMRef": "f592d36c-06b0-4179-baec-ff1de3514c40"
+          },
+          "Version": "5.0.1"
+        },
+        {
+          "ID": "redux-thunk@3.1.0",
+          "Name": "redux-thunk",
+          "Identifier": {
+            "PURL": "pkg:npm/redux-thunk@3.1.0",
+            "UID": "bf419e2f75ffd48c",
+            "BOMRef": "4ffa5210-e3ca-4e26-8099-ee47c363681b"
+          },
+          "Version": "3.1.0",
+          "DependsOn": [
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "regenerator-runtime@0.14.1",
+          "Name": "regenerator-runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/regenerator-runtime@0.14.1",
+            "UID": "698a24307ce3812c",
+            "BOMRef": "b3a2bb41-da29-4b3c-9c13-355ed69c4d86"
+          },
+          "Version": "0.14.1"
+        },
+        {
+          "ID": "reselect@5.1.0",
+          "Name": "reselect",
+          "Identifier": {
+            "PURL": "pkg:npm/reselect@5.1.0",
+            "UID": "6d28341e9f946972",
+            "BOMRef": "pkg:npm/reselect@5.1.0"
+          },
+          "Version": "5.1.0"
+        },
+        {
+          "ID": "scheduler@0.23.2",
+          "Name": "scheduler",
+          "Identifier": {
+            "PURL": "pkg:npm/scheduler@0.23.2",
+            "UID": "522461a2479e19e4",
+            "BOMRef": "167e12c2-e308-448f-ac77-d13564f1710f"
+          },
+          "Version": "0.23.2",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "tabbable@6.2.0",
+          "Name": "tabbable",
+          "Identifier": {
+            "PURL": "pkg:npm/tabbable@6.2.0",
+            "UID": "309dbe33a551d0b8",
+            "BOMRef": "4e3b8b85-63c6-4b96-9c9b-c21350216fa0"
+          },
+          "Version": "6.2.0"
+        },
+        {
+          "ID": "use-sync-external-store@1.2.2",
+          "Name": "use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/use-sync-external-store@1.2.2",
+            "UID": "28d2f292e121cd5",
+            "BOMRef": "639834ae-799c-4820-b285-df18e84cd46d"
+          },
+          "Version": "1.2.2",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-22029",
+          "VendorIDs": [
+            "GHSA-2w69-qvjg-hvjx"
+          ],
+          "PkgID": "@remix-run/router@1.16.1",
+          "PkgName": "@remix-run/router",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "f325fa2b12bf2554",
+            "BOMRef": "477f2503-8686-4a64-9117-9a82a5041cec"
+          },
+          "InstalledVersion": "1.16.1",
+          "FixedVersion": "1.23.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-22029",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Fingerprint": "sha256:4630b45e4a787adfd36c7f30fe5f5e65a8420bebe920042eba55f3bd7d3670b8",
+          "Title": "@remix-run/router: react-router: React Router vulnerable to XSS via Open Redirects",
+          "Description": "React Router is a router for React. In @remix-run/router version prior to 1.23.2. and react-router 7.0.0 through 7.11.0, React Router (and Remix v1/v2) SPA open navigation redirects originating from loaders or actions in Framework Mode, Data Mode, or the unstable RSC modes can result in unsafe URLs causing unintended javascript execution on the client. This is only an issue if you are creating redirect paths from untrusted content or via an open redirect. There is no impact if Declarative Mode (\u003cBrowserRouter\u003e) is being used. This issue has been patched in @remix-run/router version 1.23.2 and react-router version 7.12.0.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 2,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-22029",
+            "https://github.com/remix-run/react-router",
+            "https://github.com/remix-run/react-router/security/advisories/GHSA-2w69-qvjg-hvjx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-22029",
+            "https://www.cve.org/CVERecord?id=CVE-2026-22029"
+          ],
+          "PublishedDate": "2026-01-10T03:15:48.87Z",
+          "LastModifiedDate": "2026-02-10T19:36:31.503Z"
+        }
+      ]
+    },
+    {
+      "Target": "frontend/setup/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Packages": [
+        {
+          "ID": "@babel/runtime@7.24.5",
+          "Name": "@babel/runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/%40babel/runtime@7.24.5",
+            "UID": "da67c0b43029f611",
+            "BOMRef": "0d0107d9-b452-4640-b32c-b5a840bb65fd"
+          },
+          "Version": "7.24.5",
+          "DependsOn": [
+            "regenerator-runtime@0.14.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/core@1.6.2",
+          "Name": "@floating-ui/core",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/core@1.6.2",
+            "UID": "f0aaa3fe1c11cc8d",
+            "BOMRef": "ff4e3f57-32cd-4cd5-a599-77b675704d75"
+          },
+          "Version": "1.6.2",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/dom@1.6.5",
+          "Name": "@floating-ui/dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/dom@1.6.5",
+            "UID": "4e152ef89ba01891",
+            "BOMRef": "1478a9d3-fa60-4d0a-a7ce-73932cfa373e"
+          },
+          "Version": "1.6.5",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2",
+            "@floating-ui/core@1.6.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react@0.26.17",
+          "Name": "@floating-ui/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react@0.26.17",
+            "UID": "e55cf3ded8a8cfef",
+            "BOMRef": "edb016a1-07fe-4e57-a826-35c8e6a47106"
+          },
+          "Version": "0.26.17",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2",
+            "react@18.3.1",
+            "@floating-ui/react-dom@2.1.0",
+            "react-dom@18.3.1",
+            "tabbable@6.2.0"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react-dom@2.1.0",
+          "Name": "@floating-ui/react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react-dom@2.1.0",
+            "UID": "50c72ea59335b961",
+            "BOMRef": "8c21f709-a15f-4fe7-9d84-b67ec90816b6"
+          },
+          "Version": "2.1.0",
+          "DependsOn": [
+            "@floating-ui/dom@1.6.5",
+            "react@18.3.1",
+            "react-dom@18.3.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/utils@0.2.2",
+          "Name": "@floating-ui/utils",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/utils@0.2.2",
+            "UID": "6dbb2a2a22e7d2e",
+            "BOMRef": "3e877f62-0f88-41e2-b9e3-4352b1a226f5"
+          },
+          "Version": "0.2.2"
+        },
+        {
+          "ID": "@reduxjs/toolkit@2.2.5",
+          "Name": "@reduxjs/toolkit",
+          "Identifier": {
+            "PURL": "pkg:npm/%40reduxjs/toolkit@2.2.5",
+            "UID": "349b4c39114dcaf5",
+            "BOMRef": "72b92e12-1fee-49c3-98b8-9f5360fb9bab"
+          },
+          "Version": "2.2.5",
+          "DependsOn": [
+            "immer@10.1.1",
+            "react-redux@9.1.2",
+            "react@18.3.1",
+            "redux@5.0.1",
+            "redux-thunk@3.1.0",
+            "reselect@5.1.1"
+          ]
+        },
+        {
+          "ID": "@remix-run/router@1.16.1",
+          "Name": "@remix-run/router",
+          "Identifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "4c6f4570dde3b53",
+            "BOMRef": "a46f9dc0-2f8e-41ab-9ca0-2916951d55bc"
+          },
+          "Version": "1.16.1"
+        },
+        {
+          "ID": "@types/prop-types@15.7.12",
+          "Name": "@types/prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/prop-types@15.7.12",
+            "UID": "f13fceaf1b991f29",
+            "BOMRef": "dfbcaf47-3b2b-42b0-8000-6b55815db5cb"
+          },
+          "Version": "15.7.12"
+        },
+        {
+          "ID": "@types/react@18.3.2",
+          "Name": "@types/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react@18.3.2",
+            "UID": "95f44a3b8b5a361b",
+            "BOMRef": "7438aa06-8f46-44f1-be32-e9f33b47fd75"
+          },
+          "Version": "18.3.2",
+          "DependsOn": [
+            "csstype@3.1.3",
+            "@types/prop-types@15.7.12"
+          ]
+        },
+        {
+          "ID": "@types/use-sync-external-store@0.0.3",
+          "Name": "@types/use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/use-sync-external-store@0.0.3",
+            "UID": "bc15324e085dbc23",
+            "BOMRef": "6f2202d8-0910-463a-bbfc-c31cfc59c73d"
+          },
+          "Version": "0.0.3"
+        },
+        {
+          "ID": "clone@2.1.2",
+          "Name": "clone",
+          "Identifier": {
+            "PURL": "pkg:npm/clone@2.1.2",
+            "UID": "1bb186f4780ee15f",
+            "BOMRef": "34277744-38ac-4caf-8f85-3da1b84375b9"
+          },
+          "Version": "2.1.2"
+        },
+        {
+          "ID": "clsx@2.1.1",
+          "Name": "clsx",
+          "Identifier": {
+            "PURL": "pkg:npm/clsx@2.1.1",
+            "UID": "393c4606440b1e0c",
+            "BOMRef": "72b5fb67-762a-44dc-bc86-a8dc605380bb"
+          },
+          "Version": "2.1.1"
+        },
+        {
+          "ID": "csstype@3.1.3",
+          "Name": "csstype",
+          "Identifier": {
+            "PURL": "pkg:npm/csstype@3.1.3",
+            "UID": "d9db9bbf84e22a90",
+            "BOMRef": "3c5b059f-7228-40b9-b45a-4f5e7cb43524"
+          },
+          "Version": "3.1.3"
+        },
+        {
+          "ID": "date-fns@3.6.0",
+          "Name": "date-fns",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns@3.6.0",
+            "UID": "3a3e9e2b1367b41e",
+            "BOMRef": "733c4f17-f868-4197-87a6-6e421a2841bc"
+          },
+          "Version": "3.6.0"
+        },
+        {
+          "ID": "date-fns-tz@3.1.3",
+          "Name": "date-fns-tz",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns-tz@3.1.3",
+            "UID": "f098e403855ee420",
+            "BOMRef": "3398d917-6922-47f1-98f9-b9cd38b14958"
+          },
+          "Version": "3.1.3",
+          "DependsOn": [
+            "date-fns@3.6.0"
+          ]
+        },
+        {
+          "ID": "html-parse-stringify@3.0.1",
+          "Name": "html-parse-stringify",
+          "Identifier": {
+            "PURL": "pkg:npm/html-parse-stringify@3.0.1",
+            "UID": "b510bdb8a330333e",
+            "BOMRef": "e4a65d0d-a40c-4da9-96be-a30b52596770"
+          },
+          "Version": "3.0.1",
+          "DependsOn": [
+            "void-elements@3.1.0"
+          ]
+        },
+        {
+          "ID": "i18next@23.11.4",
+          "Name": "i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/i18next@23.11.4",
+            "UID": "ccb4a40030ae0f77",
+            "BOMRef": "deb306c0-3c0d-4a6f-a9c7-6eb8b89ba464"
+          },
+          "Version": "23.11.4",
+          "DependsOn": [
+            "@babel/runtime@7.24.5"
+          ]
+        },
+        {
+          "ID": "immer@10.1.1",
+          "Name": "immer",
+          "Identifier": {
+            "PURL": "pkg:npm/immer@10.1.1",
+            "UID": "bc19be2bdc73ea83",
+            "BOMRef": "6344b9e2-c569-4971-a34c-dc517cd02577"
+          },
+          "Version": "10.1.1"
+        },
+        {
+          "ID": "js-tokens@4.0.0",
+          "Name": "js-tokens",
+          "Identifier": {
+            "PURL": "pkg:npm/js-tokens@4.0.0",
+            "UID": "832dc311c50e6248",
+            "BOMRef": "5ba26fd0-a264-49fb-951f-45e74fe2b322"
+          },
+          "Version": "4.0.0"
+        },
+        {
+          "ID": "loose-envify@1.4.0",
+          "Name": "loose-envify",
+          "Identifier": {
+            "PURL": "pkg:npm/loose-envify@1.4.0",
+            "UID": "84577afdae7bc233",
+            "BOMRef": "77835d3a-648f-4cbf-8f37-2c3d984a2660"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "js-tokens@4.0.0"
+          ]
+        },
+        {
+          "ID": "object-assign@4.1.1",
+          "Name": "object-assign",
+          "Identifier": {
+            "PURL": "pkg:npm/object-assign@4.1.1",
+            "UID": "e24f4d7122f348ce",
+            "BOMRef": "2a506b15-c98d-4e60-968e-bf6540f95cd3"
+          },
+          "Version": "4.1.1"
+        },
+        {
+          "ID": "prop-types@15.8.1",
+          "Name": "prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/prop-types@15.8.1",
+            "UID": "64343707d79ab0b9",
+            "BOMRef": "6e587309-2a03-4ba6-8995-848431ec897e"
+          },
+          "Version": "15.8.1",
+          "DependsOn": [
+            "object-assign@4.1.1",
+            "loose-envify@1.4.0",
+            "react-is@16.13.1"
+          ]
+        },
+        {
+          "ID": "property-expr@2.0.6",
+          "Name": "property-expr",
+          "Identifier": {
+            "PURL": "pkg:npm/property-expr@2.0.6",
+            "UID": "beca14c688662a46",
+            "BOMRef": "b3804e70-dcd2-49f6-b67b-52b829da7d78"
+          },
+          "Version": "2.0.6"
+        },
+        {
+          "ID": "react@18.3.1",
+          "Name": "react",
+          "Identifier": {
+            "PURL": "pkg:npm/react@18.3.1",
+            "UID": "7e15e8c5aee89a1",
+            "BOMRef": "8ba0ec34-e338-42ed-9b16-44a99f710370"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "react-beforeunload@2.6.0",
+          "Name": "react-beforeunload",
+          "Identifier": {
+            "PURL": "pkg:npm/react-beforeunload@2.6.0",
+            "UID": "8c918cfa3be2c61f",
+            "BOMRef": "pkg:npm/react-beforeunload@2.6.0"
+          },
+          "Version": "2.6.0",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-datepicker@6.9.0",
+          "Name": "react-datepicker",
+          "Identifier": {
+            "PURL": "pkg:npm/react-datepicker@6.9.0",
+            "UID": "633c6625e5f1dd7c",
+            "BOMRef": "9d544b77-826e-48fa-a593-bdc6ee9f496e"
+          },
+          "Version": "6.9.0",
+          "DependsOn": [
+            "prop-types@15.8.1",
+            "clsx@2.1.1",
+            "date-fns@3.6.0",
+            "react@18.3.1",
+            "react-onclickoutside@6.13.1",
+            "react-dom@18.3.1",
+            "@floating-ui/react@0.26.17"
+          ]
+        },
+        {
+          "ID": "react-dom@18.3.1",
+          "Name": "react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dom@18.3.1",
+            "UID": "9c3b10ec6942ba8",
+            "BOMRef": "d7ad609e-4b5a-4444-a514-1057116f45f0"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "loose-envify@1.4.0",
+            "react@18.3.1",
+            "scheduler@0.23.2"
+          ]
+        },
+        {
+          "ID": "react-error-boundary@4.0.13",
+          "Name": "react-error-boundary",
+          "Identifier": {
+            "PURL": "pkg:npm/react-error-boundary@4.0.13",
+            "UID": "17acd6e5c47b30e0",
+            "BOMRef": "99f1e77e-05a5-46ab-813b-83eb3643a75d"
+          },
+          "Version": "4.0.13",
+          "DependsOn": [
+            "@babel/runtime@7.24.5",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-hook-form@7.51.4",
+          "Name": "react-hook-form",
+          "Identifier": {
+            "PURL": "pkg:npm/react-hook-form@7.51.4",
+            "UID": "9ec27c854da5e861",
+            "BOMRef": "ff05f8bd-b64b-4d7b-a903-f308efaf42db"
+          },
+          "Version": "7.51.4",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-i18next@14.1.1",
+          "Name": "react-i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/react-i18next@14.1.1",
+            "UID": "80cf8591eaf97239",
+            "BOMRef": "77a0044f-bbef-4e02-9eee-39f3a62716ae"
+          },
+          "Version": "14.1.1",
+          "DependsOn": [
+            "@babel/runtime@7.24.5",
+            "react@18.3.1",
+            "i18next@23.11.4",
+            "html-parse-stringify@3.0.1"
+          ]
+        },
+        {
+          "ID": "react-is@16.13.1",
+          "Name": "react-is",
+          "Identifier": {
+            "PURL": "pkg:npm/react-is@16.13.1",
+            "UID": "12c011853c551911",
+            "BOMRef": "f5135955-efc3-4620-b4e0-b410170011fd"
+          },
+          "Version": "16.13.1"
+        },
+        {
+          "ID": "react-onclickoutside@6.13.1",
+          "Name": "react-onclickoutside",
+          "Identifier": {
+            "PURL": "pkg:npm/react-onclickoutside@6.13.1",
+            "UID": "5cf8fa0f17ec661a",
+            "BOMRef": "d2d18fd3-62cf-4415-9270-8c908cd76583"
+          },
+          "Version": "6.13.1",
+          "DependsOn": [
+            "react@18.3.1",
+            "react-dom@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-paginate@8.2.0",
+          "Name": "react-paginate",
+          "Identifier": {
+            "PURL": "pkg:npm/react-paginate@8.2.0",
+            "UID": "798336833c4f8e4d",
+            "BOMRef": "5cb6333d-c56e-4d36-9911-094e5955a0f7"
+          },
+          "Version": "8.2.0",
+          "DependsOn": [
+            "prop-types@15.8.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-redux@9.1.2",
+          "Name": "react-redux",
+          "Identifier": {
+            "PURL": "pkg:npm/react-redux@9.1.2",
+            "UID": "13960e475a698acd",
+            "BOMRef": "896690ec-02b9-49be-868c-6790b3877e0b"
+          },
+          "Version": "9.1.2",
+          "DependsOn": [
+            "@types/use-sync-external-store@0.0.3",
+            "@types/react@18.3.2",
+            "react@18.3.1",
+            "use-sync-external-store@1.2.2",
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "react-router@6.23.1",
+          "Name": "react-router",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router@6.23.1",
+            "UID": "c14c791f5b24dc5f",
+            "BOMRef": "8b80fdff-6cbb-4765-ae14-bb1044dd1d23"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "react@18.3.1",
+            "@remix-run/router@1.16.1"
+          ]
+        },
+        {
+          "ID": "react-router-dom@6.23.1",
+          "Name": "react-router-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router-dom@6.23.1",
+            "UID": "1d294dd284f93613",
+            "BOMRef": "63971d3a-dd5e-4a97-8399-2ad1e0a52c2a"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "react-router@6.23.1",
+            "react@18.3.1",
+            "@remix-run/router@1.16.1",
+            "react-dom@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-spinners@0.13.8",
+          "Name": "react-spinners",
+          "Identifier": {
+            "PURL": "pkg:npm/react-spinners@0.13.8",
+            "UID": "e926984bab1d1002",
+            "BOMRef": "aff30154-5d2b-40c3-a124-5b2ed2ce8a38"
+          },
+          "Version": "0.13.8",
+          "DependsOn": [
+            "react@18.3.1",
+            "react-dom@18.3.1"
+          ]
+        },
+        {
+          "ID": "redux@5.0.1",
+          "Name": "redux",
+          "Identifier": {
+            "PURL": "pkg:npm/redux@5.0.1",
+            "UID": "44c38fe89f1fd9c6",
+            "BOMRef": "c5782488-91d8-450a-876d-35389dc9f7a3"
+          },
+          "Version": "5.0.1"
+        },
+        {
+          "ID": "redux-thunk@3.1.0",
+          "Name": "redux-thunk",
+          "Identifier": {
+            "PURL": "pkg:npm/redux-thunk@3.1.0",
+            "UID": "c60cb6d7eba7abb9",
+            "BOMRef": "ec97768e-d0a3-4f6a-8c88-7666f3b070c8"
+          },
+          "Version": "3.1.0",
+          "DependsOn": [
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "regenerator-runtime@0.14.1",
+          "Name": "regenerator-runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/regenerator-runtime@0.14.1",
+            "UID": "1de4f187a2b1fc02",
+            "BOMRef": "d472493c-a431-48b6-bd5d-55265a5110bf"
+          },
+          "Version": "0.14.1"
+        },
+        {
+          "ID": "reselect@5.1.1",
+          "Name": "reselect",
+          "Identifier": {
+            "PURL": "pkg:npm/reselect@5.1.1",
+            "UID": "b0824ad7c6ec5b38",
+            "BOMRef": "f9725fa1-5695-4f9f-902f-d4cd18a9974e"
+          },
+          "Version": "5.1.1"
+        },
+        {
+          "ID": "scheduler@0.23.2",
+          "Name": "scheduler",
+          "Identifier": {
+            "PURL": "pkg:npm/scheduler@0.23.2",
+            "UID": "45fce87eb53f54d",
+            "BOMRef": "cf733ce8-1df9-42dc-b5fd-022d151a5e06"
+          },
+          "Version": "0.23.2",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "secomcloud-lib@1.0.0",
+          "Name": "secomcloud-lib",
+          "Identifier": {
+            "PURL": "pkg:npm/secomcloud-lib@1.0.0",
+            "UID": "f5609d7d3a30d28b",
+            "BOMRef": "39d5923d-6f8f-48ba-b658-da0a83da6602"
+          },
+          "Version": "1.0.0",
+          "DependsOn": [
+            "date-fns-tz@3.1.3",
+            "clone@2.1.2",
+            "react-paginate@8.2.0",
+            "react-router-dom@6.23.1",
+            "@reduxjs/toolkit@2.2.5",
+            "date-fns@3.6.0",
+            "react-redux@9.1.2",
+            "react-router@6.23.1",
+            "react@18.3.1",
+            "react-datepicker@6.9.0",
+            "react-spinners@0.13.8",
+            "react-dom@18.3.1",
+            "i18next@23.11.4"
+          ]
+        },
+        {
+          "ID": "tabbable@6.2.0",
+          "Name": "tabbable",
+          "Identifier": {
+            "PURL": "pkg:npm/tabbable@6.2.0",
+            "UID": "ba3a81f5f05e6a6f",
+            "BOMRef": "ff6bf2c5-3ee0-4c1e-af0e-8b274b8efd1f"
+          },
+          "Version": "6.2.0"
+        },
+        {
+          "ID": "tiny-case@1.0.3",
+          "Name": "tiny-case",
+          "Identifier": {
+            "PURL": "pkg:npm/tiny-case@1.0.3",
+            "UID": "a3dea9cab63eb61e",
+            "BOMRef": "cf4f82b0-7f5d-4132-8680-d2d96f4944bf"
+          },
+          "Version": "1.0.3"
+        },
+        {
+          "ID": "toposort@2.0.2",
+          "Name": "toposort",
+          "Identifier": {
+            "PURL": "pkg:npm/toposort@2.0.2",
+            "UID": "31b92cd70b4152ee",
+            "BOMRef": "08b21f7e-a2ec-4f8f-a2d5-753973b3d688"
+          },
+          "Version": "2.0.2"
+        },
+        {
+          "ID": "type-fest@2.19.0",
+          "Name": "type-fest",
+          "Identifier": {
+            "PURL": "pkg:npm/type-fest@2.19.0",
+            "UID": "70fc8c5c6ddca460",
+            "BOMRef": "b9839ab5-93e7-4571-b901-bccfc6cf2299"
+          },
+          "Version": "2.19.0"
+        },
+        {
+          "ID": "use-sync-external-store@1.2.2",
+          "Name": "use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/use-sync-external-store@1.2.2",
+            "UID": "2fb862f2632ecdf3",
+            "BOMRef": "950318ca-fe54-4c09-bc44-3c9c4d69e33a"
+          },
+          "Version": "1.2.2",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "void-elements@3.1.0",
+          "Name": "void-elements",
+          "Identifier": {
+            "PURL": "pkg:npm/void-elements@3.1.0",
+            "UID": "5405c510e868014a",
+            "BOMRef": "d3d78d39-4c2c-4149-964c-f0fe39baabda"
+          },
+          "Version": "3.1.0"
+        },
+        {
+          "ID": "yup@1.4.0",
+          "Name": "yup",
+          "Identifier": {
+            "PURL": "pkg:npm/yup@1.4.0",
+            "UID": "9e9fda5dee439d08",
+            "BOMRef": "817886c1-5339-4293-8afb-9a20fb4da75b"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "toposort@2.0.2",
+            "property-expr@2.0.6",
+            "type-fest@2.19.0",
+            "tiny-case@1.0.3"
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-22029",
+          "VendorIDs": [
+            "GHSA-2w69-qvjg-hvjx"
+          ],
+          "PkgID": "@remix-run/router@1.16.1",
+          "PkgName": "@remix-run/router",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "4c6f4570dde3b53",
+            "BOMRef": "a46f9dc0-2f8e-41ab-9ca0-2916951d55bc"
+          },
+          "InstalledVersion": "1.16.1",
+          "FixedVersion": "1.23.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-22029",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Fingerprint": "sha256:dcb8d5cf90b4031d9cb2d2ee549ba07a56680538029d3f425656bc929cb7d115",
+          "Title": "@remix-run/router: react-router: React Router vulnerable to XSS via Open Redirects",
+          "Description": "React Router is a router for React. In @remix-run/router version prior to 1.23.2. and react-router 7.0.0 through 7.11.0, React Router (and Remix v1/v2) SPA open navigation redirects originating from loaders or actions in Framework Mode, Data Mode, or the unstable RSC modes can result in unsafe URLs causing unintended javascript execution on the client. This is only an issue if you are creating redirect paths from untrusted content or via an open redirect. There is no impact if Declarative Mode (\u003cBrowserRouter\u003e) is being used. This issue has been patched in @remix-run/router version 1.23.2 and react-router version 7.12.0.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 2,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-22029",
+            "https://github.com/remix-run/react-router",
+            "https://github.com/remix-run/react-router/security/advisories/GHSA-2w69-qvjg-hvjx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-22029",
+            "https://www.cve.org/CVERecord?id=CVE-2026-22029"
+          ],
+          "PublishedDate": "2026-01-10T03:15:48.87Z",
+          "LastModifiedDate": "2026-02-10T19:36:31.503Z"
+        }
+      ]
+    },
+    {
+      "Target": "frontend/user/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Packages": [
+        {
+          "ID": "@babel/runtime@7.24.5",
+          "Name": "@babel/runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/%40babel/runtime@7.24.5",
+            "UID": "ba3ad8f733fd0825",
+            "BOMRef": "a5376e3c-9908-4f32-9973-a23646cb1b0a"
+          },
+          "Version": "7.24.5",
+          "DependsOn": [
+            "regenerator-runtime@0.14.1"
+          ]
+        },
+        {
+          "ID": "@fastify/busboy@2.1.1",
+          "Name": "@fastify/busboy",
+          "Identifier": {
+            "PURL": "pkg:npm/%40fastify/busboy@2.1.1",
+            "UID": "7c8e2c527920198",
+            "BOMRef": "pkg:npm/%40fastify/busboy@2.1.1"
+          },
+          "Version": "2.1.1"
+        },
+        {
+          "ID": "@firebase/analytics@0.10.3",
+          "Name": "@firebase/analytics",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/analytics@0.10.3",
+            "UID": "4467bdad40db83ce",
+            "BOMRef": "pkg:npm/%40firebase/analytics@0.10.3"
+          },
+          "Version": "0.10.3",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/installations@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/analytics-compat@0.2.9",
+          "Name": "@firebase/analytics-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/analytics-compat@0.2.9",
+            "UID": "c6e3fc877c49baf3",
+            "BOMRef": "pkg:npm/%40firebase/analytics-compat@0.2.9"
+          },
+          "Version": "0.2.9",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/analytics-types@0.8.2",
+            "@firebase/analytics@0.10.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/analytics-types@0.8.2",
+          "Name": "@firebase/analytics-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/analytics-types@0.8.2",
+            "UID": "9551eab653c69214",
+            "BOMRef": "pkg:npm/%40firebase/analytics-types@0.8.2"
+          },
+          "Version": "0.8.2"
+        },
+        {
+          "ID": "@firebase/app@0.10.3",
+          "Name": "@firebase/app",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/app@0.10.3",
+            "UID": "9663626d827e45c3",
+            "BOMRef": "pkg:npm/%40firebase/app@0.10.3"
+          },
+          "Version": "0.10.3",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6",
+            "idb@7.1.1"
+          ]
+        },
+        {
+          "ID": "@firebase/app-check@0.8.4",
+          "Name": "@firebase/app-check",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/app-check@0.8.4",
+            "UID": "b97b5657ec448661",
+            "BOMRef": "pkg:npm/%40firebase/app-check@0.8.4"
+          },
+          "Version": "0.8.4",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/app-check-compat@0.3.11",
+          "Name": "@firebase/app-check-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/app-check-compat@0.3.11",
+            "UID": "fe53fd3101483be7",
+            "BOMRef": "pkg:npm/%40firebase/app-check-compat@0.3.11"
+          },
+          "Version": "0.3.11",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-check-types@0.5.2",
+            "@firebase/app-check@0.8.4",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/app-check-interop-types@0.3.2",
+          "Name": "@firebase/app-check-interop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/app-check-interop-types@0.3.2",
+            "UID": "2de7a99e7531b733",
+            "BOMRef": "pkg:npm/%40firebase/app-check-interop-types@0.3.2"
+          },
+          "Version": "0.3.2"
+        },
+        {
+          "ID": "@firebase/app-check-types@0.5.2",
+          "Name": "@firebase/app-check-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/app-check-types@0.5.2",
+            "UID": "b3c67bae3803436b",
+            "BOMRef": "pkg:npm/%40firebase/app-check-types@0.5.2"
+          },
+          "Version": "0.5.2"
+        },
+        {
+          "ID": "@firebase/app-compat@0.2.33",
+          "Name": "@firebase/app-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/app-compat@0.2.33",
+            "UID": "39c56e91fabcfbab",
+            "BOMRef": "pkg:npm/%40firebase/app-compat@0.2.33"
+          },
+          "Version": "0.2.33",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/app-types@0.9.2",
+          "Name": "@firebase/app-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/app-types@0.9.2",
+            "UID": "2648ac9f4b295535",
+            "BOMRef": "pkg:npm/%40firebase/app-types@0.9.2"
+          },
+          "Version": "0.9.2"
+        },
+        {
+          "ID": "@firebase/auth@1.7.3",
+          "Name": "@firebase/auth",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/auth@1.7.3",
+            "UID": "41b0ba9f9fd05a5d",
+            "BOMRef": "pkg:npm/%40firebase/auth@1.7.3"
+          },
+          "Version": "1.7.3",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6",
+            "undici@5.28.4"
+          ]
+        },
+        {
+          "ID": "@firebase/auth-compat@0.5.8",
+          "Name": "@firebase/auth-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/auth-compat@0.5.8",
+            "UID": "b0fdbfead7526560",
+            "BOMRef": "pkg:npm/%40firebase/auth-compat@0.5.8"
+          },
+          "Version": "0.5.8",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/auth-types@0.12.2",
+            "@firebase/auth@1.7.3",
+            "@firebase/component@0.6.7",
+            "@firebase/util@1.9.6",
+            "undici@5.28.4"
+          ]
+        },
+        {
+          "ID": "@firebase/auth-interop-types@0.2.3",
+          "Name": "@firebase/auth-interop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/auth-interop-types@0.2.3",
+            "UID": "7c1d701a9e11d0a8",
+            "BOMRef": "pkg:npm/%40firebase/auth-interop-types@0.2.3"
+          },
+          "Version": "0.2.3"
+        },
+        {
+          "ID": "@firebase/auth-types@0.12.2",
+          "Name": "@firebase/auth-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/auth-types@0.12.2",
+            "UID": "31f24c4180d8d740",
+            "BOMRef": "pkg:npm/%40firebase/auth-types@0.12.2"
+          },
+          "Version": "0.12.2",
+          "DependsOn": [
+            "@firebase/app-types@0.9.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/component@0.6.7",
+          "Name": "@firebase/component",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/component@0.6.7",
+            "UID": "fb0ce2426b6dd479",
+            "BOMRef": "pkg:npm/%40firebase/component@0.6.7"
+          },
+          "Version": "0.6.7",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/database@1.0.5",
+          "Name": "@firebase/database",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/database@1.0.5",
+            "UID": "dd4af61f125c45a9",
+            "BOMRef": "pkg:npm/%40firebase/database@1.0.5"
+          },
+          "Version": "1.0.5",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-check-interop-types@0.3.2",
+            "@firebase/auth-interop-types@0.2.3",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6",
+            "faye-websocket@0.11.4"
+          ]
+        },
+        {
+          "ID": "@firebase/database-compat@1.0.5",
+          "Name": "@firebase/database-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/database-compat@1.0.5",
+            "UID": "a7ef6bedc028d8af",
+            "BOMRef": "pkg:npm/%40firebase/database-compat@1.0.5"
+          },
+          "Version": "1.0.5",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/component@0.6.7",
+            "@firebase/database-types@1.0.3",
+            "@firebase/database@1.0.5",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/database-types@1.0.3",
+          "Name": "@firebase/database-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/database-types@1.0.3",
+            "UID": "3e3ba27444bd4389",
+            "BOMRef": "pkg:npm/%40firebase/database-types@1.0.3"
+          },
+          "Version": "1.0.3",
+          "DependsOn": [
+            "@firebase/app-types@0.9.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/firestore@4.6.2",
+          "Name": "@firebase/firestore",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/firestore@4.6.2",
+            "UID": "74476eef5b0644ec",
+            "BOMRef": "pkg:npm/%40firebase/firestore@4.6.2"
+          },
+          "Version": "4.6.2",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6",
+            "@firebase/webchannel-wrapper@1.0.0",
+            "@grpc/grpc-js@1.9.15",
+            "@grpc/proto-loader@0.7.13",
+            "undici@5.28.4"
+          ]
+        },
+        {
+          "ID": "@firebase/firestore-compat@0.3.31",
+          "Name": "@firebase/firestore-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/firestore-compat@0.3.31",
+            "UID": "ceaffed79a8ee093",
+            "BOMRef": "pkg:npm/%40firebase/firestore-compat@0.3.31"
+          },
+          "Version": "0.3.31",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/firestore-types@3.0.2",
+            "@firebase/firestore@4.6.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/firestore-types@3.0.2",
+          "Name": "@firebase/firestore-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/firestore-types@3.0.2",
+            "UID": "94024e5713fd53e9",
+            "BOMRef": "pkg:npm/%40firebase/firestore-types@3.0.2"
+          },
+          "Version": "3.0.2",
+          "DependsOn": [
+            "@firebase/app-types@0.9.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/functions@0.11.5",
+          "Name": "@firebase/functions",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/functions@0.11.5",
+            "UID": "d4afe1e2da118c2b",
+            "BOMRef": "pkg:npm/%40firebase/functions@0.11.5"
+          },
+          "Version": "0.11.5",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-check-interop-types@0.3.2",
+            "@firebase/app@0.10.3",
+            "@firebase/auth-interop-types@0.2.3",
+            "@firebase/component@0.6.7",
+            "@firebase/messaging-interop-types@0.2.2",
+            "@firebase/util@1.9.6",
+            "undici@5.28.4"
+          ]
+        },
+        {
+          "ID": "@firebase/functions-compat@0.3.11",
+          "Name": "@firebase/functions-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/functions-compat@0.3.11",
+            "UID": "907673b80726d20e",
+            "BOMRef": "pkg:npm/%40firebase/functions-compat@0.3.11"
+          },
+          "Version": "0.3.11",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/functions-types@0.6.2",
+            "@firebase/functions@0.11.5",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/functions-types@0.6.2",
+          "Name": "@firebase/functions-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/functions-types@0.6.2",
+            "UID": "ace6ac76833173ed",
+            "BOMRef": "pkg:npm/%40firebase/functions-types@0.6.2"
+          },
+          "Version": "0.6.2"
+        },
+        {
+          "ID": "@firebase/installations@0.6.7",
+          "Name": "@firebase/installations",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/installations@0.6.7",
+            "UID": "33c243495bae809f",
+            "BOMRef": "pkg:npm/%40firebase/installations@0.6.7"
+          },
+          "Version": "0.6.7",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/util@1.9.6",
+            "idb@7.1.1"
+          ]
+        },
+        {
+          "ID": "@firebase/installations-compat@0.2.7",
+          "Name": "@firebase/installations-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/installations-compat@0.2.7",
+            "UID": "2e0581014a6265a9",
+            "BOMRef": "pkg:npm/%40firebase/installations-compat@0.2.7"
+          },
+          "Version": "0.2.7",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/installations-types@0.5.2",
+            "@firebase/installations@0.6.7",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/installations-types@0.5.2",
+          "Name": "@firebase/installations-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/installations-types@0.5.2",
+            "UID": "ce37494bb1778501",
+            "BOMRef": "pkg:npm/%40firebase/installations-types@0.5.2"
+          },
+          "Version": "0.5.2",
+          "DependsOn": [
+            "@firebase/app-types@0.9.2"
+          ]
+        },
+        {
+          "ID": "@firebase/logger@0.4.2",
+          "Name": "@firebase/logger",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/logger@0.4.2",
+            "UID": "b6f7a049a4e8ca21",
+            "BOMRef": "pkg:npm/%40firebase/logger@0.4.2"
+          },
+          "Version": "0.4.2",
+          "DependsOn": [
+            "tslib@2.6.3"
+          ]
+        },
+        {
+          "ID": "@firebase/messaging@0.12.9",
+          "Name": "@firebase/messaging",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/messaging@0.12.9",
+            "UID": "6d4fc2660a5b8193",
+            "BOMRef": "pkg:npm/%40firebase/messaging@0.12.9"
+          },
+          "Version": "0.12.9",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/installations@0.6.7",
+            "@firebase/messaging-interop-types@0.2.2",
+            "@firebase/util@1.9.6",
+            "idb@7.1.1"
+          ]
+        },
+        {
+          "ID": "@firebase/messaging-compat@0.2.9",
+          "Name": "@firebase/messaging-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/messaging-compat@0.2.9",
+            "UID": "9f2ac44d5a79ebe4",
+            "BOMRef": "pkg:npm/%40firebase/messaging-compat@0.2.9"
+          },
+          "Version": "0.2.9",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/messaging@0.12.9",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/messaging-interop-types@0.2.2",
+          "Name": "@firebase/messaging-interop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/messaging-interop-types@0.2.2",
+            "UID": "6650a0b6b48084b3",
+            "BOMRef": "pkg:npm/%40firebase/messaging-interop-types@0.2.2"
+          },
+          "Version": "0.2.2"
+        },
+        {
+          "ID": "@firebase/performance@0.6.7",
+          "Name": "@firebase/performance",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/performance@0.6.7",
+            "UID": "3ff80eb6425d89df",
+            "BOMRef": "pkg:npm/%40firebase/performance@0.6.7"
+          },
+          "Version": "0.6.7",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/installations@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/performance-compat@0.2.7",
+          "Name": "@firebase/performance-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/performance-compat@0.2.7",
+            "UID": "190a238f30499ef1",
+            "BOMRef": "pkg:npm/%40firebase/performance-compat@0.2.7"
+          },
+          "Version": "0.2.7",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/performance-types@0.2.2",
+            "@firebase/performance@0.6.7",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/performance-types@0.2.2",
+          "Name": "@firebase/performance-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/performance-types@0.2.2",
+            "UID": "7651ed7b0dad8998",
+            "BOMRef": "pkg:npm/%40firebase/performance-types@0.2.2"
+          },
+          "Version": "0.2.2"
+        },
+        {
+          "ID": "@firebase/remote-config@0.4.7",
+          "Name": "@firebase/remote-config",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/remote-config@0.4.7",
+            "UID": "8790648fff4697ba",
+            "BOMRef": "pkg:npm/%40firebase/remote-config@0.4.7"
+          },
+          "Version": "0.4.7",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/installations@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/remote-config-compat@0.2.7",
+          "Name": "@firebase/remote-config-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/remote-config-compat@0.2.7",
+            "UID": "2616ce1ff59b4dc9",
+            "BOMRef": "pkg:npm/%40firebase/remote-config-compat@0.2.7"
+          },
+          "Version": "0.2.7",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/remote-config-types@0.3.2",
+            "@firebase/remote-config@0.4.7",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/remote-config-types@0.3.2",
+          "Name": "@firebase/remote-config-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/remote-config-types@0.3.2",
+            "UID": "8973afec954274d1",
+            "BOMRef": "pkg:npm/%40firebase/remote-config-types@0.3.2"
+          },
+          "Version": "0.3.2"
+        },
+        {
+          "ID": "@firebase/storage@0.12.5",
+          "Name": "@firebase/storage",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/storage@0.12.5",
+            "UID": "9e1e4e27d3cd9d7",
+            "BOMRef": "pkg:npm/%40firebase/storage@0.12.5"
+          },
+          "Version": "0.12.5",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/util@1.9.6",
+            "undici@5.28.4"
+          ]
+        },
+        {
+          "ID": "@firebase/storage-compat@0.3.8",
+          "Name": "@firebase/storage-compat",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/storage-compat@0.3.8",
+            "UID": "b47a0efdf7e6900c",
+            "BOMRef": "pkg:npm/%40firebase/storage-compat@0.3.8"
+          },
+          "Version": "0.3.8",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/component@0.6.7",
+            "@firebase/storage-types@0.8.2",
+            "@firebase/storage@0.12.5",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/storage-types@0.8.2",
+          "Name": "@firebase/storage-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/storage-types@0.8.2",
+            "UID": "d9f905760a1208d6",
+            "BOMRef": "pkg:npm/%40firebase/storage-types@0.8.2"
+          },
+          "Version": "0.8.2",
+          "DependsOn": [
+            "@firebase/app-types@0.9.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/util@1.9.6",
+          "Name": "@firebase/util",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/util@1.9.6",
+            "UID": "7ef17e2ce8b4bc7",
+            "BOMRef": "pkg:npm/%40firebase/util@1.9.6"
+          },
+          "Version": "1.9.6",
+          "DependsOn": [
+            "tslib@2.6.3"
+          ]
+        },
+        {
+          "ID": "@firebase/vertexai-preview@0.0.1",
+          "Name": "@firebase/vertexai-preview",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/vertexai-preview@0.0.1",
+            "UID": "b07ea93a60840e69",
+            "BOMRef": "pkg:npm/%40firebase/vertexai-preview@0.0.1"
+          },
+          "Version": "0.0.1",
+          "DependsOn": [
+            "tslib@2.6.3",
+            "@firebase/app-check-interop-types@0.3.2",
+            "@firebase/app-types@0.9.2",
+            "@firebase/app@0.10.3",
+            "@firebase/component@0.6.7",
+            "@firebase/logger@0.4.2",
+            "@firebase/util@1.9.6"
+          ]
+        },
+        {
+          "ID": "@firebase/webchannel-wrapper@1.0.0",
+          "Name": "@firebase/webchannel-wrapper",
+          "Identifier": {
+            "PURL": "pkg:npm/%40firebase/webchannel-wrapper@1.0.0",
+            "UID": "aecfa14e4999a28d",
+            "BOMRef": "pkg:npm/%40firebase/webchannel-wrapper@1.0.0"
+          },
+          "Version": "1.0.0"
+        },
+        {
+          "ID": "@floating-ui/core@1.6.2",
+          "Name": "@floating-ui/core",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/core@1.6.2",
+            "UID": "24878e0ae82639c2",
+            "BOMRef": "ffcd9f7b-ab2e-47f6-8793-e07a827daf6c"
+          },
+          "Version": "1.6.2",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/dom@1.6.5",
+          "Name": "@floating-ui/dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/dom@1.6.5",
+            "UID": "c9111ed2e8c3f95d",
+            "BOMRef": "9731a6d5-7800-45c6-ba9f-c2e0d83c1245"
+          },
+          "Version": "1.6.5",
+          "DependsOn": [
+            "@floating-ui/utils@0.2.2",
+            "@floating-ui/core@1.6.2"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react@0.26.17",
+          "Name": "@floating-ui/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react@0.26.17",
+            "UID": "5fd5d035e3eb9b9e",
+            "BOMRef": "b78dba6d-553e-49a0-beeb-86a3665f0837"
+          },
+          "Version": "0.26.17",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "@floating-ui/utils@0.2.2",
+            "@floating-ui/react-dom@2.1.0",
+            "tabbable@6.2.0",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/react-dom@2.1.0",
+          "Name": "@floating-ui/react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/react-dom@2.1.0",
+            "UID": "2fe87f6b12fbd79f",
+            "BOMRef": "87f0b3d3-607d-43a6-8aca-6eb756a004d8"
+          },
+          "Version": "2.1.0",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "@floating-ui/dom@1.6.5",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "@floating-ui/utils@0.2.2",
+          "Name": "@floating-ui/utils",
+          "Identifier": {
+            "PURL": "pkg:npm/%40floating-ui/utils@0.2.2",
+            "UID": "eec7989df8c3e65",
+            "BOMRef": "87aaf05a-9d5c-4672-96bc-4108e1f259ec"
+          },
+          "Version": "0.2.2"
+        },
+        {
+          "ID": "@grpc/grpc-js@1.9.15",
+          "Name": "@grpc/grpc-js",
+          "Identifier": {
+            "PURL": "pkg:npm/%40grpc/grpc-js@1.9.15",
+            "UID": "d35c5d556cef297b",
+            "BOMRef": "pkg:npm/%40grpc/grpc-js@1.9.15"
+          },
+          "Version": "1.9.15",
+          "DependsOn": [
+            "@grpc/proto-loader@0.7.13",
+            "@types/node@20.14.6"
+          ]
+        },
+        {
+          "ID": "@grpc/proto-loader@0.7.13",
+          "Name": "@grpc/proto-loader",
+          "Identifier": {
+            "PURL": "pkg:npm/%40grpc/proto-loader@0.7.13",
+            "UID": "59131020811afc89",
+            "BOMRef": "pkg:npm/%40grpc/proto-loader@0.7.13"
+          },
+          "Version": "0.7.13",
+          "DependsOn": [
+            "lodash.camelcase@4.3.0",
+            "long@5.2.3",
+            "protobufjs@7.3.2",
+            "yargs@17.7.2"
+          ]
+        },
+        {
+          "ID": "@protobufjs/aspromise@1.1.2",
+          "Name": "@protobufjs/aspromise",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/aspromise@1.1.2",
+            "UID": "344e29c764bac648",
+            "BOMRef": "pkg:npm/%40protobufjs/aspromise@1.1.2"
+          },
+          "Version": "1.1.2"
+        },
+        {
+          "ID": "@protobufjs/base64@1.1.2",
+          "Name": "@protobufjs/base64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/base64@1.1.2",
+            "UID": "155fe53634534077",
+            "BOMRef": "pkg:npm/%40protobufjs/base64@1.1.2"
+          },
+          "Version": "1.1.2"
+        },
+        {
+          "ID": "@protobufjs/codegen@2.0.4",
+          "Name": "@protobufjs/codegen",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/codegen@2.0.4",
+            "UID": "d13cf3ba7283eadd",
+            "BOMRef": "pkg:npm/%40protobufjs/codegen@2.0.4"
+          },
+          "Version": "2.0.4"
+        },
+        {
+          "ID": "@protobufjs/eventemitter@1.1.0",
+          "Name": "@protobufjs/eventemitter",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/eventemitter@1.1.0",
+            "UID": "3cc3fbc548f9370f",
+            "BOMRef": "pkg:npm/%40protobufjs/eventemitter@1.1.0"
+          },
+          "Version": "1.1.0"
+        },
+        {
+          "ID": "@protobufjs/fetch@1.1.0",
+          "Name": "@protobufjs/fetch",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/fetch@1.1.0",
+            "UID": "93339654281d049",
+            "BOMRef": "pkg:npm/%40protobufjs/fetch@1.1.0"
+          },
+          "Version": "1.1.0",
+          "DependsOn": [
+            "@protobufjs/aspromise@1.1.2",
+            "@protobufjs/inquire@1.1.0"
+          ]
+        },
+        {
+          "ID": "@protobufjs/float@1.0.2",
+          "Name": "@protobufjs/float",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/float@1.0.2",
+            "UID": "789166a361259c26",
+            "BOMRef": "pkg:npm/%40protobufjs/float@1.0.2"
+          },
+          "Version": "1.0.2"
+        },
+        {
+          "ID": "@protobufjs/inquire@1.1.0",
+          "Name": "@protobufjs/inquire",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/inquire@1.1.0",
+            "UID": "efd1bca2c2ac2ff7",
+            "BOMRef": "pkg:npm/%40protobufjs/inquire@1.1.0"
+          },
+          "Version": "1.1.0"
+        },
+        {
+          "ID": "@protobufjs/path@1.1.2",
+          "Name": "@protobufjs/path",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/path@1.1.2",
+            "UID": "eee89b547c0d4566",
+            "BOMRef": "pkg:npm/%40protobufjs/path@1.1.2"
+          },
+          "Version": "1.1.2"
+        },
+        {
+          "ID": "@protobufjs/pool@1.1.0",
+          "Name": "@protobufjs/pool",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/pool@1.1.0",
+            "UID": "366964b63c05c507",
+            "BOMRef": "pkg:npm/%40protobufjs/pool@1.1.0"
+          },
+          "Version": "1.1.0"
+        },
+        {
+          "ID": "@protobufjs/utf8@1.1.0",
+          "Name": "@protobufjs/utf8",
+          "Identifier": {
+            "PURL": "pkg:npm/%40protobufjs/utf8@1.1.0",
+            "UID": "7c71f0b38e3fa45c",
+            "BOMRef": "pkg:npm/%40protobufjs/utf8@1.1.0"
+          },
+          "Version": "1.1.0"
+        },
+        {
+          "ID": "@reduxjs/toolkit@2.2.5",
+          "Name": "@reduxjs/toolkit",
+          "Identifier": {
+            "PURL": "pkg:npm/%40reduxjs/toolkit@2.2.5",
+            "UID": "d5afa92158714591",
+            "BOMRef": "533bc976-bc5f-406a-b997-89a34512bd55"
+          },
+          "Version": "2.2.5",
+          "DependsOn": [
+            "redux-thunk@3.1.0",
+            "redux@5.0.1",
+            "reselect@5.1.1",
+            "react-redux@9.1.2",
+            "react@18.3.1",
+            "immer@10.1.1"
+          ]
+        },
+        {
+          "ID": "@remix-run/router@1.16.1",
+          "Name": "@remix-run/router",
+          "Identifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "27c0a541bf5d3f1",
+            "BOMRef": "be440c9b-d04f-450d-a86a-cf39d55fc37e"
+          },
+          "Version": "1.16.1"
+        },
+        {
+          "ID": "@types/node@20.14.6",
+          "Name": "@types/node",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/node@20.14.6",
+            "UID": "58efaba5071dddfd",
+            "BOMRef": "pkg:npm/%40types/node@20.14.6"
+          },
+          "Version": "20.14.6",
+          "DependsOn": [
+            "undici-types@5.26.5"
+          ]
+        },
+        {
+          "ID": "@types/prop-types@15.7.12",
+          "Name": "@types/prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/prop-types@15.7.12",
+            "UID": "e34820aa5cd83799",
+            "BOMRef": "d8212478-0d99-47dd-87a4-08ea029226d6"
+          },
+          "Version": "15.7.12"
+        },
+        {
+          "ID": "@types/react@18.3.2",
+          "Name": "@types/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react@18.3.2",
+            "UID": "184a70c3dafa0e80",
+            "BOMRef": "933f2797-e588-4dd5-af8a-573f364e4c15"
+          },
+          "Version": "18.3.2",
+          "DependsOn": [
+            "csstype@3.1.3",
+            "@types/prop-types@15.7.12"
+          ]
+        },
+        {
+          "ID": "@types/use-sync-external-store@0.0.3",
+          "Name": "@types/use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/use-sync-external-store@0.0.3",
+            "UID": "3306b05a47c0e47e",
+            "BOMRef": "6a1c3714-1c69-40a7-934d-c4063b7f7356"
+          },
+          "Version": "0.0.3"
+        },
+        {
+          "ID": "ansi-regex@5.0.1",
+          "Name": "ansi-regex",
+          "Identifier": {
+            "PURL": "pkg:npm/ansi-regex@5.0.1",
+            "UID": "ae5f1fa67f0552cd",
+            "BOMRef": "pkg:npm/ansi-regex@5.0.1"
+          },
+          "Version": "5.0.1"
+        },
+        {
+          "ID": "ansi-styles@4.3.0",
+          "Name": "ansi-styles",
+          "Identifier": {
+            "PURL": "pkg:npm/ansi-styles@4.3.0",
+            "UID": "32c691e7e0ea1126",
+            "BOMRef": "pkg:npm/ansi-styles@4.3.0"
+          },
+          "Version": "4.3.0",
+          "DependsOn": [
+            "color-convert@2.0.1"
+          ]
+        },
+        {
+          "ID": "cliui@8.0.1",
+          "Name": "cliui",
+          "Identifier": {
+            "PURL": "pkg:npm/cliui@8.0.1",
+            "UID": "898d04bfc9cf3d07",
+            "BOMRef": "pkg:npm/cliui@8.0.1"
+          },
+          "Version": "8.0.1",
+          "DependsOn": [
+            "string-width@4.2.3",
+            "strip-ansi@6.0.1",
+            "wrap-ansi@7.0.0"
+          ]
+        },
+        {
+          "ID": "clone@2.1.2",
+          "Name": "clone",
+          "Identifier": {
+            "PURL": "pkg:npm/clone@2.1.2",
+            "UID": "c511c39cb7c3fdb0",
+            "BOMRef": "d4c2b1bb-a310-4bfb-b0f7-2ecda99479d3"
+          },
+          "Version": "2.1.2"
+        },
+        {
+          "ID": "clsx@2.1.1",
+          "Name": "clsx",
+          "Identifier": {
+            "PURL": "pkg:npm/clsx@2.1.1",
+            "UID": "89b2449f7955be67",
+            "BOMRef": "6b5587ee-7497-4220-bae8-40235ce57e78"
+          },
+          "Version": "2.1.1"
+        },
+        {
+          "ID": "color-convert@2.0.1",
+          "Name": "color-convert",
+          "Identifier": {
+            "PURL": "pkg:npm/color-convert@2.0.1",
+            "UID": "41e5a2cf55f230ad",
+            "BOMRef": "pkg:npm/color-convert@2.0.1"
+          },
+          "Version": "2.0.1",
+          "DependsOn": [
+            "color-name@1.1.4"
+          ]
+        },
+        {
+          "ID": "color-name@1.1.4",
+          "Name": "color-name",
+          "Identifier": {
+            "PURL": "pkg:npm/color-name@1.1.4",
+            "UID": "29e4af8aff8fa1e8",
+            "BOMRef": "pkg:npm/color-name@1.1.4"
+          },
+          "Version": "1.1.4"
+        },
+        {
+          "ID": "csstype@3.1.3",
+          "Name": "csstype",
+          "Identifier": {
+            "PURL": "pkg:npm/csstype@3.1.3",
+            "UID": "5c0d94cc105f2c9",
+            "BOMRef": "ab2e2813-e92b-422f-9458-ae6f513e9d18"
+          },
+          "Version": "3.1.3"
+        },
+        {
+          "ID": "date-fns@3.6.0",
+          "Name": "date-fns",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns@3.6.0",
+            "UID": "427703ab87f994b8",
+            "BOMRef": "0b02dc7e-c288-4cf0-934e-6e47f84f0c4e"
+          },
+          "Version": "3.6.0"
+        },
+        {
+          "ID": "date-fns-tz@3.1.3",
+          "Name": "date-fns-tz",
+          "Identifier": {
+            "PURL": "pkg:npm/date-fns-tz@3.1.3",
+            "UID": "ce4a6d0f74700bbd",
+            "BOMRef": "d464f3bf-bddf-4b04-88f8-a79e0ef887bd"
+          },
+          "Version": "3.1.3",
+          "DependsOn": [
+            "date-fns@3.6.0"
+          ]
+        },
+        {
+          "ID": "decode-uri-component@0.4.1",
+          "Name": "decode-uri-component",
+          "Identifier": {
+            "PURL": "pkg:npm/decode-uri-component@0.4.1",
+            "UID": "11280312774c1df9",
+            "BOMRef": "pkg:npm/decode-uri-component@0.4.1"
+          },
+          "Version": "0.4.1"
+        },
+        {
+          "ID": "emoji-regex@8.0.0",
+          "Name": "emoji-regex",
+          "Identifier": {
+            "PURL": "pkg:npm/emoji-regex@8.0.0",
+            "UID": "a6cf1cd0eeea3850",
+            "BOMRef": "pkg:npm/emoji-regex@8.0.0"
+          },
+          "Version": "8.0.0"
+        },
+        {
+          "ID": "escalade@3.1.2",
+          "Name": "escalade",
+          "Identifier": {
+            "PURL": "pkg:npm/escalade@3.1.2",
+            "UID": "34ad4629bcbd9713",
+            "BOMRef": "pkg:npm/escalade@3.1.2"
+          },
+          "Version": "3.1.2"
+        },
+        {
+          "ID": "faye-websocket@0.11.4",
+          "Name": "faye-websocket",
+          "Identifier": {
+            "PURL": "pkg:npm/faye-websocket@0.11.4",
+            "UID": "680038b9cce78111",
+            "BOMRef": "pkg:npm/faye-websocket@0.11.4"
+          },
+          "Version": "0.11.4",
+          "DependsOn": [
+            "websocket-driver@0.7.4"
+          ]
+        },
+        {
+          "ID": "filter-obj@5.1.0",
+          "Name": "filter-obj",
+          "Identifier": {
+            "PURL": "pkg:npm/filter-obj@5.1.0",
+            "UID": "fa826f334e669d",
+            "BOMRef": "pkg:npm/filter-obj@5.1.0"
+          },
+          "Version": "5.1.0"
+        },
+        {
+          "ID": "firebase@10.12.0",
+          "Name": "firebase",
+          "Identifier": {
+            "PURL": "pkg:npm/firebase@10.12.0",
+            "UID": "ac1fb0c963fad0df",
+            "BOMRef": "pkg:npm/firebase@10.12.0"
+          },
+          "Version": "10.12.0",
+          "DependsOn": [
+            "@firebase/analytics-compat@0.2.9",
+            "@firebase/analytics@0.10.3",
+            "@firebase/app-check-compat@0.3.11",
+            "@firebase/app-check@0.8.4",
+            "@firebase/app-compat@0.2.33",
+            "@firebase/app-types@0.9.2",
+            "@firebase/app@0.10.3",
+            "@firebase/auth-compat@0.5.8",
+            "@firebase/auth@1.7.3",
+            "@firebase/database-compat@1.0.5",
+            "@firebase/database@1.0.5",
+            "@firebase/firestore-compat@0.3.31",
+            "@firebase/firestore@4.6.2",
+            "@firebase/functions-compat@0.3.11",
+            "@firebase/functions@0.11.5",
+            "@firebase/installations-compat@0.2.7",
+            "@firebase/installations@0.6.7",
+            "@firebase/messaging-compat@0.2.9",
+            "@firebase/messaging@0.12.9",
+            "@firebase/performance-compat@0.2.7",
+            "@firebase/performance@0.6.7",
+            "@firebase/remote-config-compat@0.2.7",
+            "@firebase/remote-config@0.4.7",
+            "@firebase/storage-compat@0.3.8",
+            "@firebase/storage@0.12.5",
+            "@firebase/util@1.9.6",
+            "@firebase/vertexai-preview@0.0.1"
+          ]
+        },
+        {
+          "ID": "get-caller-file@2.0.5",
+          "Name": "get-caller-file",
+          "Identifier": {
+            "PURL": "pkg:npm/get-caller-file@2.0.5",
+            "UID": "c07d64188ee2cff6",
+            "BOMRef": "pkg:npm/get-caller-file@2.0.5"
+          },
+          "Version": "2.0.5"
+        },
+        {
+          "ID": "html-parse-stringify@3.0.1",
+          "Name": "html-parse-stringify",
+          "Identifier": {
+            "PURL": "pkg:npm/html-parse-stringify@3.0.1",
+            "UID": "2b16096d0afdf91c",
+            "BOMRef": "c94a3cc3-fdf3-48ee-afbd-f64cd065ad62"
+          },
+          "Version": "3.0.1",
+          "DependsOn": [
+            "void-elements@3.1.0"
+          ]
+        },
+        {
+          "ID": "http-parser-js@0.5.8",
+          "Name": "http-parser-js",
+          "Identifier": {
+            "PURL": "pkg:npm/http-parser-js@0.5.8",
+            "UID": "5c4fa26fac5d29a5",
+            "BOMRef": "pkg:npm/http-parser-js@0.5.8"
+          },
+          "Version": "0.5.8"
+        },
+        {
+          "ID": "i18next@23.11.4",
+          "Name": "i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/i18next@23.11.4",
+            "UID": "b79b27092d6c9e11",
+            "BOMRef": "be9d8c81-5f80-461c-9079-37c8b0f3cf8d"
+          },
+          "Version": "23.11.4",
+          "DependsOn": [
+            "@babel/runtime@7.24.5"
+          ]
+        },
+        {
+          "ID": "idb@7.1.1",
+          "Name": "idb",
+          "Identifier": {
+            "PURL": "pkg:npm/idb@7.1.1",
+            "UID": "c8a6590754d015b5",
+            "BOMRef": "pkg:npm/idb@7.1.1"
+          },
+          "Version": "7.1.1"
+        },
+        {
+          "ID": "immer@10.1.1",
+          "Name": "immer",
+          "Identifier": {
+            "PURL": "pkg:npm/immer@10.1.1",
+            "UID": "33e7fe417b5510f6",
+            "BOMRef": "fe136fe2-8b89-4967-bbcf-859784d3f782"
+          },
+          "Version": "10.1.1"
+        },
+        {
+          "ID": "is-fullwidth-code-point@3.0.0",
+          "Name": "is-fullwidth-code-point",
+          "Identifier": {
+            "PURL": "pkg:npm/is-fullwidth-code-point@3.0.0",
+            "UID": "9968c8380dc67d7d",
+            "BOMRef": "pkg:npm/is-fullwidth-code-point@3.0.0"
+          },
+          "Version": "3.0.0"
+        },
+        {
+          "ID": "js-tokens@4.0.0",
+          "Name": "js-tokens",
+          "Identifier": {
+            "PURL": "pkg:npm/js-tokens@4.0.0",
+            "UID": "97dbde0db9a398d5",
+            "BOMRef": "a25cfbde-82a4-48dd-9432-84f8c8015419"
+          },
+          "Version": "4.0.0"
+        },
+        {
+          "ID": "lodash.camelcase@4.3.0",
+          "Name": "lodash.camelcase",
+          "Identifier": {
+            "PURL": "pkg:npm/lodash.camelcase@4.3.0",
+            "UID": "2880550d8176c604",
+            "BOMRef": "pkg:npm/lodash.camelcase@4.3.0"
+          },
+          "Version": "4.3.0"
+        },
+        {
+          "ID": "lodash.clonedeep@4.5.0",
+          "Name": "lodash.clonedeep",
+          "Identifier": {
+            "PURL": "pkg:npm/lodash.clonedeep@4.5.0",
+            "UID": "5d32cc05ac5253f6",
+            "BOMRef": "ff5764e6-7e33-4ec9-ab3f-df295ac101b1"
+          },
+          "Version": "4.5.0"
+        },
+        {
+          "ID": "long@5.2.3",
+          "Name": "long",
+          "Identifier": {
+            "PURL": "pkg:npm/long@5.2.3",
+            "UID": "96d486b3b2fdb97e",
+            "BOMRef": "pkg:npm/long@5.2.3"
+          },
+          "Version": "5.2.3"
+        },
+        {
+          "ID": "loose-envify@1.4.0",
+          "Name": "loose-envify",
+          "Identifier": {
+            "PURL": "pkg:npm/loose-envify@1.4.0",
+            "UID": "796eee9ffc6ab3f2",
+            "BOMRef": "2f62ddc5-c3b2-481d-8187-6bd2d97bd172"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "js-tokens@4.0.0"
+          ]
+        },
+        {
+          "ID": "object-assign@4.1.1",
+          "Name": "object-assign",
+          "Identifier": {
+            "PURL": "pkg:npm/object-assign@4.1.1",
+            "UID": "3214f4f3405ea78d",
+            "BOMRef": "573955f0-b374-418f-b173-99ee18e61920"
+          },
+          "Version": "4.1.1"
+        },
+        {
+          "ID": "prop-types@15.8.1",
+          "Name": "prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/prop-types@15.8.1",
+            "UID": "f1e1341420948e49",
+            "BOMRef": "f7e41a97-412b-4db5-80d7-ff698448bba1"
+          },
+          "Version": "15.8.1",
+          "DependsOn": [
+            "loose-envify@1.4.0",
+            "object-assign@4.1.1",
+            "react-is@16.13.1"
+          ]
+        },
+        {
+          "ID": "property-expr@2.0.6",
+          "Name": "property-expr",
+          "Identifier": {
+            "PURL": "pkg:npm/property-expr@2.0.6",
+            "UID": "899b09b4d968616e",
+            "BOMRef": "436bd64d-5dca-49e2-9c2f-8aa0323ea9e5"
+          },
+          "Version": "2.0.6"
+        },
+        {
+          "ID": "protobufjs@7.3.2",
+          "Name": "protobufjs",
+          "Identifier": {
+            "PURL": "pkg:npm/protobufjs@7.3.2",
+            "UID": "d3b25fb7c7bca13b",
+            "BOMRef": "pkg:npm/protobufjs@7.3.2"
+          },
+          "Version": "7.3.2",
+          "DependsOn": [
+            "@protobufjs/aspromise@1.1.2",
+            "@protobufjs/base64@1.1.2",
+            "@protobufjs/codegen@2.0.4",
+            "@protobufjs/eventemitter@1.1.0",
+            "@protobufjs/fetch@1.1.0",
+            "@protobufjs/float@1.0.2",
+            "@protobufjs/inquire@1.1.0",
+            "@protobufjs/path@1.1.2",
+            "@protobufjs/pool@1.1.0",
+            "@protobufjs/utf8@1.1.0",
+            "@types/node@20.14.6",
+            "long@5.2.3"
+          ]
+        },
+        {
+          "ID": "query-string@9.0.0",
+          "Name": "query-string",
+          "Identifier": {
+            "PURL": "pkg:npm/query-string@9.0.0",
+            "UID": "9da2d4aac39e23e2",
+            "BOMRef": "pkg:npm/query-string@9.0.0"
+          },
+          "Version": "9.0.0",
+          "DependsOn": [
+            "decode-uri-component@0.4.1",
+            "filter-obj@5.1.0",
+            "split-on-first@3.0.0"
+          ]
+        },
+        {
+          "ID": "react@18.3.1",
+          "Name": "react",
+          "Identifier": {
+            "PURL": "pkg:npm/react@18.3.1",
+            "UID": "706226090738f1ae",
+            "BOMRef": "f441d373-e478-4103-ba65-454b2f76a868"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "react-datepicker@6.9.0",
+          "Name": "react-datepicker",
+          "Identifier": {
+            "PURL": "pkg:npm/react-datepicker@6.9.0",
+            "UID": "b194d3e1f16df05e",
+            "BOMRef": "75e3aba1-2133-48f7-be0a-46d2c28f1ff3"
+          },
+          "Version": "6.9.0",
+          "DependsOn": [
+            "date-fns@3.6.0",
+            "react-dom@18.3.1",
+            "react-onclickoutside@6.13.1",
+            "clsx@2.1.1",
+            "@floating-ui/react@0.26.17",
+            "react@18.3.1",
+            "prop-types@15.8.1"
+          ]
+        },
+        {
+          "ID": "react-dom@18.3.1",
+          "Name": "react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dom@18.3.1",
+            "UID": "b1f792b5dd4be402",
+            "BOMRef": "1b50fa49-f042-4305-9ac6-a36c71527706"
+          },
+          "Version": "18.3.1",
+          "DependsOn": [
+            "loose-envify@1.4.0",
+            "scheduler@0.23.2",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-error-boundary@4.0.13",
+          "Name": "react-error-boundary",
+          "Identifier": {
+            "PURL": "pkg:npm/react-error-boundary@4.0.13",
+            "UID": "48a94270c74ac52b",
+            "BOMRef": "1225ece4-9089-43d5-8404-d460f09d2298"
+          },
+          "Version": "4.0.13",
+          "DependsOn": [
+            "@babel/runtime@7.24.5",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-hook-form@7.51.4",
+          "Name": "react-hook-form",
+          "Identifier": {
+            "PURL": "pkg:npm/react-hook-form@7.51.4",
+            "UID": "b2c83f0beb58dc19",
+            "BOMRef": "c10bffc1-31e8-4373-8461-f5043e427852"
+          },
+          "Version": "7.51.4",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-i18next@14.1.1",
+          "Name": "react-i18next",
+          "Identifier": {
+            "PURL": "pkg:npm/react-i18next@14.1.1",
+            "UID": "2a3fa0ca74ce0afb",
+            "BOMRef": "3dcc605b-833f-4d3b-88e4-b3396310e86f"
+          },
+          "Version": "14.1.1",
+          "DependsOn": [
+            "@babel/runtime@7.24.5",
+            "i18next@23.11.4",
+            "html-parse-stringify@3.0.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-is@16.13.1",
+          "Name": "react-is",
+          "Identifier": {
+            "PURL": "pkg:npm/react-is@16.13.1",
+            "UID": "54879b95c33fc8c9",
+            "BOMRef": "ee9858d0-3bb2-43da-985e-3b77856585ed"
+          },
+          "Version": "16.13.1"
+        },
+        {
+          "ID": "react-onclickoutside@6.13.1",
+          "Name": "react-onclickoutside",
+          "Identifier": {
+            "PURL": "pkg:npm/react-onclickoutside@6.13.1",
+            "UID": "d3367be62956188b",
+            "BOMRef": "56483739-87ca-4e63-8989-dc100c6e4712"
+          },
+          "Version": "6.13.1",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-paginate@8.2.0",
+          "Name": "react-paginate",
+          "Identifier": {
+            "PURL": "pkg:npm/react-paginate@8.2.0",
+            "UID": "f85a1092c9e059d0",
+            "BOMRef": "6cbbd8df-bd14-473a-b8c9-268b0d7b3af3"
+          },
+          "Version": "8.2.0",
+          "DependsOn": [
+            "react@18.3.1",
+            "prop-types@15.8.1"
+          ]
+        },
+        {
+          "ID": "react-redux@9.1.2",
+          "Name": "react-redux",
+          "Identifier": {
+            "PURL": "pkg:npm/react-redux@9.1.2",
+            "UID": "ee2d74cd82be63ba",
+            "BOMRef": "86f5dfdd-2e1f-4a9c-bbdf-d46cc9065ce0"
+          },
+          "Version": "9.1.2",
+          "DependsOn": [
+            "redux@5.0.1",
+            "@types/use-sync-external-store@0.0.3",
+            "use-sync-external-store@1.2.2",
+            "@types/react@18.3.2",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-router@6.23.1",
+          "Name": "react-router",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router@6.23.1",
+            "UID": "2bcb5c9c65378860",
+            "BOMRef": "7e2c93f5-b5f2-4622-9b9e-c2d68e4dce83"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "@remix-run/router@1.16.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-router-dom@6.23.1",
+          "Name": "react-router-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-router-dom@6.23.1",
+            "UID": "ecc3dda3d4f38681",
+            "BOMRef": "72a07fa3-008b-423b-a8ea-b13c96f96a57"
+          },
+          "Version": "6.23.1",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react-router@6.23.1",
+            "@remix-run/router@1.16.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-spinners@0.13.8",
+          "Name": "react-spinners",
+          "Identifier": {
+            "PURL": "pkg:npm/react-spinners@0.13.8",
+            "UID": "6f7bcf07b5a07378",
+            "BOMRef": "194ec52d-cb37-43ef-a75d-6ef13fdb6c51"
+          },
+          "Version": "0.13.8",
+          "DependsOn": [
+            "react-dom@18.3.1",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "react-string-replace@1.1.1",
+          "Name": "react-string-replace",
+          "Identifier": {
+            "PURL": "pkg:npm/react-string-replace@1.1.1",
+            "UID": "8054e0bd413427ad",
+            "BOMRef": "ec148f97-60a4-4f08-b83c-0c3395a962f1"
+          },
+          "Version": "1.1.1"
+        },
+        {
+          "ID": "redux@5.0.1",
+          "Name": "redux",
+          "Identifier": {
+            "PURL": "pkg:npm/redux@5.0.1",
+            "UID": "428e573fc2fc3495",
+            "BOMRef": "1a5b42c8-56f6-4612-9780-e883976cfc50"
+          },
+          "Version": "5.0.1"
+        },
+        {
+          "ID": "redux-thunk@3.1.0",
+          "Name": "redux-thunk",
+          "Identifier": {
+            "PURL": "pkg:npm/redux-thunk@3.1.0",
+            "UID": "6b7741796968f35a",
+            "BOMRef": "0c5f50ca-b4ea-4d51-8192-50c6cc0b5ab8"
+          },
+          "Version": "3.1.0",
+          "DependsOn": [
+            "redux@5.0.1"
+          ]
+        },
+        {
+          "ID": "regenerator-runtime@0.14.1",
+          "Name": "regenerator-runtime",
+          "Identifier": {
+            "PURL": "pkg:npm/regenerator-runtime@0.14.1",
+            "UID": "9b5cf4691fa13329",
+            "BOMRef": "1ffda710-49e8-4532-a162-717d4c18600f"
+          },
+          "Version": "0.14.1"
+        },
+        {
+          "ID": "require-directory@2.1.1",
+          "Name": "require-directory",
+          "Identifier": {
+            "PURL": "pkg:npm/require-directory@2.1.1",
+            "UID": "ed121041fb03175e",
+            "BOMRef": "pkg:npm/require-directory@2.1.1"
+          },
+          "Version": "2.1.1"
+        },
+        {
+          "ID": "reselect@5.1.1",
+          "Name": "reselect",
+          "Identifier": {
+            "PURL": "pkg:npm/reselect@5.1.1",
+            "UID": "83bd07e263b9839",
+            "BOMRef": "2911e066-e206-4f70-ad0d-c0c645b4ae29"
+          },
+          "Version": "5.1.1"
+        },
+        {
+          "ID": "safe-buffer@5.2.1",
+          "Name": "safe-buffer",
+          "Identifier": {
+            "PURL": "pkg:npm/safe-buffer@5.2.1",
+            "UID": "9b5756b8575b4264",
+            "BOMRef": "pkg:npm/safe-buffer@5.2.1"
+          },
+          "Version": "5.2.1"
+        },
+        {
+          "ID": "scheduler@0.23.2",
+          "Name": "scheduler",
+          "Identifier": {
+            "PURL": "pkg:npm/scheduler@0.23.2",
+            "UID": "9129fdc4986deade",
+            "BOMRef": "4c92ee9a-dd36-4840-9a28-818d1fea9396"
+          },
+          "Version": "0.23.2",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ]
+        },
+        {
+          "ID": "secomcloud-lib@1.0.0",
+          "Name": "secomcloud-lib",
+          "Identifier": {
+            "PURL": "pkg:npm/secomcloud-lib@1.0.0",
+            "UID": "11ab818946b9dd38",
+            "BOMRef": "4742a35b-fc47-4be9-bf20-ec1ba77c1a20"
+          },
+          "Version": "1.0.0",
+          "DependsOn": [
+            "date-fns@3.6.0",
+            "react-spinners@0.13.8",
+            "react-dom@18.3.1",
+            "@reduxjs/toolkit@2.2.5",
+            "react-paginate@8.2.0",
+            "react-router-dom@6.23.1",
+            "react-datepicker@6.9.0",
+            "react-router@6.23.1",
+            "react-redux@9.1.2",
+            "i18next@23.11.4",
+            "date-fns-tz@3.1.3",
+            "clone@2.1.2",
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "split-on-first@3.0.0",
+          "Name": "split-on-first",
+          "Identifier": {
+            "PURL": "pkg:npm/split-on-first@3.0.0",
+            "UID": "f7eb586a0eb05e21",
+            "BOMRef": "pkg:npm/split-on-first@3.0.0"
+          },
+          "Version": "3.0.0"
+        },
+        {
+          "ID": "string-width@4.2.3",
+          "Name": "string-width",
+          "Identifier": {
+            "PURL": "pkg:npm/string-width@4.2.3",
+            "UID": "bf076907f9b801c1",
+            "BOMRef": "pkg:npm/string-width@4.2.3"
+          },
+          "Version": "4.2.3",
+          "DependsOn": [
+            "emoji-regex@8.0.0",
+            "is-fullwidth-code-point@3.0.0",
+            "strip-ansi@6.0.1"
+          ]
+        },
+        {
+          "ID": "strip-ansi@6.0.1",
+          "Name": "strip-ansi",
+          "Identifier": {
+            "PURL": "pkg:npm/strip-ansi@6.0.1",
+            "UID": "702108d0abd072da",
+            "BOMRef": "pkg:npm/strip-ansi@6.0.1"
+          },
+          "Version": "6.0.1",
+          "DependsOn": [
+            "ansi-regex@5.0.1"
+          ]
+        },
+        {
+          "ID": "tabbable@6.2.0",
+          "Name": "tabbable",
+          "Identifier": {
+            "PURL": "pkg:npm/tabbable@6.2.0",
+            "UID": "b3ea0fe422919b11",
+            "BOMRef": "8bfaa8d7-e45b-41e1-8c6b-3152283c5ac0"
+          },
+          "Version": "6.2.0"
+        },
+        {
+          "ID": "tiny-case@1.0.3",
+          "Name": "tiny-case",
+          "Identifier": {
+            "PURL": "pkg:npm/tiny-case@1.0.3",
+            "UID": "43771096e2e5e7d5",
+            "BOMRef": "a5a95b0d-a88a-4d54-aa3b-35f430d581fe"
+          },
+          "Version": "1.0.3"
+        },
+        {
+          "ID": "toposort@2.0.2",
+          "Name": "toposort",
+          "Identifier": {
+            "PURL": "pkg:npm/toposort@2.0.2",
+            "UID": "280a356296fc9405",
+            "BOMRef": "a27dde87-87d9-4b29-b0e6-f038d2d856bb"
+          },
+          "Version": "2.0.2"
+        },
+        {
+          "ID": "tslib@2.6.3",
+          "Name": "tslib",
+          "Identifier": {
+            "PURL": "pkg:npm/tslib@2.6.3",
+            "UID": "17558318c58494ef",
+            "BOMRef": "bd55802f-d6e5-4574-b10a-d03f4cbfd5ad"
+          },
+          "Version": "2.6.3"
+        },
+        {
+          "ID": "type-fest@2.19.0",
+          "Name": "type-fest",
+          "Identifier": {
+            "PURL": "pkg:npm/type-fest@2.19.0",
+            "UID": "580c897b95241aa7",
+            "BOMRef": "7ae3e7e9-3985-4ea9-94da-dde247397d3e"
+          },
+          "Version": "2.19.0"
+        },
+        {
+          "ID": "undici@5.28.4",
+          "Name": "undici",
+          "Identifier": {
+            "PURL": "pkg:npm/undici@5.28.4",
+            "UID": "4540e348b51da0c4",
+            "BOMRef": "pkg:npm/undici@5.28.4"
+          },
+          "Version": "5.28.4",
+          "DependsOn": [
+            "@fastify/busboy@2.1.1"
+          ]
+        },
+        {
+          "ID": "undici-types@5.26.5",
+          "Name": "undici-types",
+          "Identifier": {
+            "PURL": "pkg:npm/undici-types@5.26.5",
+            "UID": "615ef347d3ad07c7",
+            "BOMRef": "pkg:npm/undici-types@5.26.5"
+          },
+          "Version": "5.26.5"
+        },
+        {
+          "ID": "use-sync-external-store@1.2.2",
+          "Name": "use-sync-external-store",
+          "Identifier": {
+            "PURL": "pkg:npm/use-sync-external-store@1.2.2",
+            "UID": "e4bef5db29370c11",
+            "BOMRef": "77dc78fa-4c5b-42c3-81a3-3d074be6dbf2"
+          },
+          "Version": "1.2.2",
+          "DependsOn": [
+            "react@18.3.1"
+          ]
+        },
+        {
+          "ID": "void-elements@3.1.0",
+          "Name": "void-elements",
+          "Identifier": {
+            "PURL": "pkg:npm/void-elements@3.1.0",
+            "UID": "7c934b33d5d76a18",
+            "BOMRef": "3123a404-5a38-4d96-ae9e-e1d7ad2d8e1d"
+          },
+          "Version": "3.1.0"
+        },
+        {
+          "ID": "websocket-driver@0.7.4",
+          "Name": "websocket-driver",
+          "Identifier": {
+            "PURL": "pkg:npm/websocket-driver@0.7.4",
+            "UID": "ea00c76b41ab934e",
+            "BOMRef": "pkg:npm/websocket-driver@0.7.4"
+          },
+          "Version": "0.7.4",
+          "DependsOn": [
+            "http-parser-js@0.5.8",
+            "safe-buffer@5.2.1",
+            "websocket-extensions@0.1.4"
+          ]
+        },
+        {
+          "ID": "websocket-extensions@0.1.4",
+          "Name": "websocket-extensions",
+          "Identifier": {
+            "PURL": "pkg:npm/websocket-extensions@0.1.4",
+            "UID": "66e7618e1553d86e",
+            "BOMRef": "pkg:npm/websocket-extensions@0.1.4"
+          },
+          "Version": "0.1.4"
+        },
+        {
+          "ID": "wrap-ansi@7.0.0",
+          "Name": "wrap-ansi",
+          "Identifier": {
+            "PURL": "pkg:npm/wrap-ansi@7.0.0",
+            "UID": "446237cb7fffc6f9",
+            "BOMRef": "pkg:npm/wrap-ansi@7.0.0"
+          },
+          "Version": "7.0.0",
+          "DependsOn": [
+            "ansi-styles@4.3.0",
+            "string-width@4.2.3",
+            "strip-ansi@6.0.1"
+          ]
+        },
+        {
+          "ID": "y18n@5.0.8",
+          "Name": "y18n",
+          "Identifier": {
+            "PURL": "pkg:npm/y18n@5.0.8",
+            "UID": "f75e51013ed53c1c",
+            "BOMRef": "pkg:npm/y18n@5.0.8"
+          },
+          "Version": "5.0.8"
+        },
+        {
+          "ID": "yargs@17.7.2",
+          "Name": "yargs",
+          "Identifier": {
+            "PURL": "pkg:npm/yargs@17.7.2",
+            "UID": "c7cbe849092159c0",
+            "BOMRef": "pkg:npm/yargs@17.7.2"
+          },
+          "Version": "17.7.2",
+          "DependsOn": [
+            "cliui@8.0.1",
+            "escalade@3.1.2",
+            "get-caller-file@2.0.5",
+            "require-directory@2.1.1",
+            "string-width@4.2.3",
+            "y18n@5.0.8",
+            "yargs-parser@21.1.1"
+          ]
+        },
+        {
+          "ID": "yargs-parser@21.1.1",
+          "Name": "yargs-parser",
+          "Identifier": {
+            "PURL": "pkg:npm/yargs-parser@21.1.1",
+            "UID": "66f199a7da9c1ea1",
+            "BOMRef": "pkg:npm/yargs-parser@21.1.1"
+          },
+          "Version": "21.1.1"
+        },
+        {
+          "ID": "yup@1.4.0",
+          "Name": "yup",
+          "Identifier": {
+            "PURL": "pkg:npm/yup@1.4.0",
+            "UID": "a58eb1a49a459efa",
+            "BOMRef": "6f27fcf5-947c-454c-ba80-dfaddfb12244"
+          },
+          "Version": "1.4.0",
+          "DependsOn": [
+            "property-expr@2.0.6",
+            "type-fest@2.19.0",
+            "toposort@2.0.2",
+            "tiny-case@1.0.3"
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-22029",
+          "VendorIDs": [
+            "GHSA-2w69-qvjg-hvjx"
+          ],
+          "PkgID": "@remix-run/router@1.16.1",
+          "PkgName": "@remix-run/router",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/%40remix-run/router@1.16.1",
+            "UID": "27c0a541bf5d3f1",
+            "BOMRef": "be440c9b-d04f-450d-a86a-cf39d55fc37e"
+          },
+          "InstalledVersion": "1.16.1",
+          "FixedVersion": "1.23.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-22029",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Fingerprint": "sha256:9d2b0e8893c50cd230e80062a130df3ac1d5c6db763054af835b5333f35ccdb1",
+          "Title": "@remix-run/router: react-router: React Router vulnerable to XSS via Open Redirects",
+          "Description": "React Router is a router for React. In @remix-run/router version prior to 1.23.2. and react-router 7.0.0 through 7.11.0, React Router (and Remix v1/v2) SPA open navigation redirects originating from loaders or actions in Framework Mode, Data Mode, or the unstable RSC modes can result in unsafe URLs causing unintended javascript execution on the client. This is only an issue if you are creating redirect paths from untrusted content or via an open redirect. There is no impact if Declarative Mode (\u003cBrowserRouter\u003e) is being used. This issue has been patched in @remix-run/router version 1.23.2 and react-router version 7.12.0.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 2,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-22029",
+            "https://github.com/remix-run/react-router",
+            "https://github.com/remix-run/react-router/security/advisories/GHSA-2w69-qvjg-hvjx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-22029",
+            "https://www.cve.org/CVERecord?id=CVE-2026-22029"
+          ],
+          "PublishedDate": "2026-01-10T03:15:48.87Z",
+          "LastModifiedDate": "2026-02-10T19:36:31.503Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-1526",
+          "VendorIDs": [
+            "GHSA-vrm6-8vpv-qv8q"
+          ],
+          "PkgID": "undici@5.28.4",
+          "PkgName": "undici",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/undici@5.28.4",
+            "UID": "4540e348b51da0c4",
+            "BOMRef": "pkg:npm/undici@5.28.4"
+          },
+          "InstalledVersion": "5.28.4",
+          "FixedVersion": "6.24.0, 7.24.0",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-1526",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Fingerprint": "sha256:079c15d01c8715e50754460580354d6610fdcbfdb4660b55b70e609a6f6a72ff",
+          "Title": "undici: undici: Denial of Service via unbounded memory consumption during WebSocket permessage-deflate decompression",
+          "Description": "The undici WebSocket client is vulnerable to a denial-of-service attack via unbounded memory consumption during permessage-deflate decompression. When a WebSocket connection negotiates the permessage-deflate extension, the client decompresses incoming compressed frames without enforcing any limit on the decompressed data size. A malicious WebSocket server can send a small compressed frame (a \"decompression bomb\") that expands to an extremely large size in memory, causing the Node.js process to exhaust available memory and crash or become unresponsive.\n\nThe vulnerability exists in the PerMessageDeflate.decompress() method, which accumulates all decompressed chunks in memory and concatenates them into a single Buffer without checking whether the total size exceeds a safe threshold.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-409"
+          ],
+          "VendorSeverity": {
+            "amazon": 3,
+            "ghsa": 3,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-1526",
+            "https://cna.openjsf.org/security-advisories.html",
+            "https://datatracker.ietf.org/doc/html/rfc7692",
+            "https://github.com/nodejs/undici",
+            "https://github.com/nodejs/undici/security/advisories/GHSA-vrm6-8vpv-qv8q",
+            "https://hackerone.com/reports/3481206",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-1526",
+            "https://owasp.org/www-community/attacks/Denial_of_Service",
+            "https://www.cve.org/CVERecord?id=CVE-2026-1526"
+          ],
+          "PublishedDate": "2026-03-12T21:16:23.933Z",
+          "LastModifiedDate": "2026-03-20T15:56:47.337Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-2229",
+          "VendorIDs": [
+            "GHSA-v9p9-hfj2-hcw8"
+          ],
+          "PkgID": "undici@5.28.4",
+          "PkgName": "undici",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/undici@5.28.4",
+            "UID": "4540e348b51da0c4",
+            "BOMRef": "pkg:npm/undici@5.28.4"
+          },
+          "InstalledVersion": "5.28.4",
+          "FixedVersion": "6.24.0, 7.24.0",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-2229",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Fingerprint": "sha256:8cc65589645ef17e0acdf1b8abdfd1aedec8545e0ca1f97da7d55ed0c0761fd4",
+          "Title": "undici: Undici: Denial of Service via invalid WebSocket permessage-deflate extension parameter",
+          "Description": "ImpactThe undici WebSocket client is vulnerable to a denial-of-service attack due to improper validation of the server_max_window_bits parameter in the permessage-deflate extension. When a WebSocket client connects to a server, it automatically advertises support for permessage-deflate compression. A malicious server can respond with an out-of-range server_max_window_bits value (outside zlib's valid range of 8-15). When the server subsequently sends a compressed frame, the client attempts to create a zlib InflateRaw instance with the invalid windowBits value, causing a synchronous RangeError exception that is not caught, resulting in immediate process termination.\n\nThe vulnerability exists because:\n\n  *  The isValidClientWindowBits() function only validates that the value contains ASCII digits, not that it falls within the valid range 8-15\n  *  The createInflateRaw() call is not wrapped in a try-catch block\n  *  The resulting exception propagates up through the call stack and crashes the Node.js process",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-248",
+            "CWE-1284"
+          ],
+          "VendorSeverity": {
+            "amazon": 3,
+            "ghsa": 3,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-2229",
+            "https://cna.openjsf.org/security-advisories.html",
+            "https://datatracker.ietf.org/doc/html/rfc7692",
+            "https://github.com/nodejs/undici",
+            "https://github.com/nodejs/undici/security/advisories/GHSA-v9p9-hfj2-hcw8",
+            "https://hackerone.com/reports/3487486",
+            "https://nodejs.org/api/zlib.html#class-zlibinflateraw",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-2229",
+            "https://www.cve.org/CVERecord?id=CVE-2026-2229"
+          ],
+          "PublishedDate": "2026-03-12T21:16:25.573Z",
+          "LastModifiedDate": "2026-03-20T15:39:12.24Z"
+        }
+      ]
+    }
+  ]
+}
