@@ -1,0 +1,35 @@
+# 集計用リポジトリの .github/workflows/update-dashboard.yml
+on:
+  push:
+    paths:
+      - 'summary-repo/data/*.json'
+
+jobs:
+  build-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Summary Table
+        run: |
+          echo "## 🛡️ 組織内セキュリティ・ダッシュボード" > README.md
+          echo "最終更新日: $(date +'%Y-%m-%d %H:%M')" >> README.md
+          echo "" >> README.md
+          echo "| リポジトリ | Critical | High | Medium | スキャン日 |" >> README.md
+          echo "| :--- | :---: | :---: | :---: | :--- |" >> README.md
+          
+          # jqを使って各JSONから数字を抽出してテーブルに追加
+          for f in summary-repo/data/*.json; do
+            REPO_NAME=$(basename $f .json)
+            CRIT=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="CRITICAL")] | length' $f)
+            HIGH=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="HIGH")] | length' $f)
+            MED=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="MEDIUM")] | length' $f)
+            DATE=$(jq -r '.Metadata.NextUpdate // "N/A"' $f | cut -d'T' -f1)
+            
+            echo "| $REPO_NAME | **$CRIT** | $HIGH | $MED | $DATE |" >> README.md
+          done
+          
+          git config user.name "Dashboard Bot"
+          git config user.email "bot@example.com"
+          git add README.md
+          git commit -m "Update Dashboard"
+          git push
