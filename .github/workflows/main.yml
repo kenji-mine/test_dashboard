@@ -1,3 +1,4 @@
+name: Make DashBoad V1
 # 集計用リポジトリの .github/workflows/update-dashboard.yml
 on:
   push:
