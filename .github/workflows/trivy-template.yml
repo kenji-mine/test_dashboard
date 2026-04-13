@@ -18,6 +18,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     env:
+      GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN }}
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       SBOM_PATH: sbom/sbom.json
       SEVERITY: "CRITICAL,HIGH"
@@ -29,6 +30,15 @@ jobs:
         uses: actions/checkout@v5
         with:
           persist-credentials: false # これを追加
+      # 【追加】参照側（Template）の中でトークンを作る
+      - name: Generate Token
+        id: internal_gen_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: kenji-mine
+          repositories: "test_dashboard"
       # URL を指定せず、公式のセットアップアクションに任せます
       - name: Install Trivy
         uses: aquasecurity/setup-trivy@e07451d2e059ed86c2870430ea286b3a9e0bf241
@@ -78,7 +88,7 @@ jobs:
           
       - name: Send result to Summary Repo
         env:
-          GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN }} # 集計リポジトリへの書込権限を持つPAT
+          GH_TOKEN: ${{ steps.internal_gen_token.outputs.token }} 
         run: |
           echo "Token length is ${#GH_TOKEN}"
           gh auth status
