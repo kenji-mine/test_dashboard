@@ -1,5 +1,4 @@
-name: Make DashBoad V1
-# 集計用リポジトリの .github/workflows/update-dashboard.yml
+name: Make DashBoard V1
 on:
   workflow_dispatch:
   push:
@@ -8,11 +7,17 @@ on:
 
 jobs:
   build-dashboard:
-    permissions:           # ← これを追加
-      contents: write      # ← これを追加
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
+    # ジョブレベルで Node.js 24 を強制する環境変数を設定
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4 # 今後 v5 等が出ればそちらに更新を推奨
+
       - name: Generate Summary Table
         run: |
           echo "## 🛡️ 組織内セキュリティ・ダッシュボード" > README.md
@@ -21,41 +26,51 @@ jobs:
           echo "| リポジトリ | Critical | High | Medium | スキャン日 |" >> README.md
           echo "| :--- | :---: | :---: | :---: | :--- |" >> README.md
           
-          # jqを使って各JSONから数字を抽出してテーブルに追加
+          # フォルダが存在しない場合のエラー防止
+          mkdir -p summary-repo/data/
+          
           for f in summary-repo/data/*.json; do
-            REPO_NAME=$(basename $f .json)
-            CRIT=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="CRITICAL")] | length' $f)
-            HIGH=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="HIGH")] | length' $f)
-            MED=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="MEDIUM")] | length' $f)
+            # ファイルが存在しない場合はスキップ
+            [ -e "$f" ] || continue
+            
+            REPO_NAME=$(basename "$f" .json)
+            
+            # jq の処理をまとめて効率化
+            STATS=$(jq -r '
+              [ .Results[].Vulnerabilities[]? ] as $v |
+              {
+                crit: ($v | map(select(.Severity=="CRITICAL")) | length),
+                high: ($v | map(select(.Severity=="HIGH")) | length),
+                med:  ($v | map(select(.Severity=="MEDIUM")) | length),
+                date: (.Metadata.CreatedAt // .Metadata.NextUpdate // "N/A")
+              }' "$f")
 
-            # アイコンの判定用変数
+            CRIT=$(echo "$STATS" | jq -r '.crit')
+            HIGH=$(echo "$STATS" | jq -r '.high')
+            MED=$(echo "$STATS" | jq -r '.med')
+            DATE=$(echo "$STATS" | jq -r '.date' | cut -d'T' -f1)
+
             CRIT_DISPLAY="**$CRIT**"
             HIGH_DISPLAY="$HIGH"
             REPO_DISPLAY="$REPO_NAME"
 
-            # Critical が 0 より大きい場合：数値に ⚠️ を付け、リポジトリ名に ❗ を付ける
             if [ "$CRIT" -gt 0 ]; then
               CRIT_DISPLAY="⚠️ **$CRIT**"
               REPO_DISPLAY="❗ $REPO_NAME"
-            fi
-
-            # High が 0 より大きい場合：数値に ⚠️ を付ける（Criticalがない場合でもHighがあれば警告）
-            if [ "$HIGH" -gt 0 ]; then
+            elif [ "$HIGH" -gt 0 ]; then
+              # Critical が 0 かつ High が 0 より大きい場合
               HIGH_DISPLAY="⚠️ $HIGH"
-              # Criticalが0でもHighがあればリポジトリ名に ❗ を付ける
-              [ "$CRIT" -eq 0 ] && REPO_DISPLAY="❗ $REPO_NAME"
+              REPO_DISPLAY="❗ $REPO_NAME"
             fi
 
-            # 日付の抽出
-            DATE_RAW=$(jq -r '.Metadata.CreatedAt // .Metadata.NextUpdate // empty' $f)
-            DATE=$(echo ${DATE_RAW:-N/A} | cut -d'T' -f1)
-            
-            # テーブルへの書き出し（判定済みの変数を使用）
             echo "| $REPO_DISPLAY | $CRIT_DISPLAY | $HIGH_DISPLAY | $MED | $DATE |" >> README.md
           done
           
-          git config user.name "Dashboard Bot"
-          git config user.email "bot@example.com"
+          # 変更がある場合のみ push する設定（差分チェック）
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Update Dashboard"
-          git push
+          if ! git diff --cached --exit-code --quiet; then
+            git commit -m "docs: update security dashboard"
+            git push
+          fi
