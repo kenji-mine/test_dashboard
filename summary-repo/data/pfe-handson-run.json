@@ -3,8 +3,8 @@
   "Trivy": {
     "Version": "0.69.3"
   },
-  "ReportID": "019d8559-9f4f-75cd-8f48-76f2ff253482",
-  "CreatedAt": "2026-04-13T05:38:56.463381487Z",
+  "ReportID": "019d85ed-193b-7374-bbdf-c0dc97ca08b8",
+  "CreatedAt": "2026-04-13T08:20:01.467228013Z",
   "ArtifactName": "sbom/sbom.json",
   "ArtifactType": "cyclonedx",
   "Results": [
