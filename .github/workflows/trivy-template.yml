@@ -6,10 +6,6 @@ on:
       sbom_path:
         required: true
         type: string
-    secrets:
-      SUMMARY_REPO_TOKEN:
-        required: true
-
 permissions:
   contents: read
   issues: write
