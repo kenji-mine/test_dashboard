@@ -80,6 +80,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN2 }} # 集計リポジトリへの書込権限を持つPAT
         run: |
+          echo "=== Current Token Status ==="
+          gh auth status
+          echo "=== Accessible Repositories ==="
+          # このトークンでアクセス可能なリポジトリを一覧表示
+          gh api -H "Accept: application/vnd.github+json" /installation/repositories --jq '.repositories[].full_name'
+        
           # 集計リポジトリを一時的にcloneしてファイルを置いてPushする
           # 1. クローン (ディレクトリ名は test_dashboard になる)
           git clone https://x-access-token:${GH_TOKEN}@github.com/kenji-mine/test_dashboard.git
