@@ -7,7 +7,7 @@ on:
         required: true
         type: string
     secrets:
-      SUMMARY_REPO_TOKEN:
+      SUMMARY_REPO_TOKEN2:
         required: true
 
 permissions:
