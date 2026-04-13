@@ -78,7 +78,7 @@ jobs:
           
       - name: Send result to Summary Repo
         env:
-          GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN }} # 集計リポジトリへの書込権限を持つPAT
+          GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN2 }} # 集計リポジトリへの書込権限を持つPAT
         run: |
           # 集計リポジトリを一時的にcloneしてファイルを置いてPushする
           # 1. クローン (ディレクトリ名は test_dashboard になる)
