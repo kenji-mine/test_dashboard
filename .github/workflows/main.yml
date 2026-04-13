@@ -27,10 +27,31 @@ jobs:
             CRIT=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="CRITICAL")] | length' $f)
             HIGH=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="HIGH")] | length' $f)
             MED=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="MEDIUM")] | length' $f)
-            # DATE=$(jq -r '.Metadata.NextUpdate // "N/A"' $f | cut -d'T' -f1)
-            DATE=$(jq -r '.Metadata.CreatedAt // .Metadata.NextUpdate // "N/A"' $f | cut -d'T' -f1)
+
+            # アイコンの判定用変数
+            CRIT_DISPLAY="**$CRIT**"
+            HIGH_DISPLAY="$HIGH"
+            REPO_DISPLAY="$REPO_NAME"
+
+            # Critical が 0 より大きい場合：数値に ⚠️ を付け、リポジトリ名に ❗ を付ける
+            if [ "$CRIT" -gt 0 ]; then
+              CRIT_DISPLAY="⚠️ **$CRIT**"
+              REPO_DISPLAY="❗ $REPO_NAME"
+            fi
+
+            # High が 0 より大きい場合：数値に ⚠️ を付ける（Criticalがない場合でもHighがあれば警告）
+            if [ "$HIGH" -gt 0 ]; then
+              HIGH_DISPLAY="⚠️ $HIGH"
+              # Criticalが0でもHighがあればリポジトリ名に ❗ を付ける
+              [ "$CRIT" -eq 0 ] && REPO_DISPLAY="❗ $REPO_NAME"
+            fi
+
+            # 日付の抽出
+            DATE_RAW=$(jq -r '.Metadata.CreatedAt // .Metadata.NextUpdate // empty' $f)
+            DATE=$(echo ${DATE_RAW:-N/A} | cut -d'T' -f1)
             
-            echo "| ❗$REPO_NAME | ⚠️**$CRIT** | $HIGH | $MED | $DATE |" >> README.md
+            # テーブルへの書き出し（判定済みの変数を使用）
+            echo "| $REPO_DISPLAY | $CRIT_DISPLAY | $HIGH_DISPLAY | $MED | $DATE |" >> README.md
           done
           
           git config user.name "Dashboard Bot"
