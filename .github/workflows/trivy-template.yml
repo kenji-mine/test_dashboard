@@ -138,8 +138,31 @@ jobs:
           EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number' || true)
 
           if [ -n "$EXISTING" ]; then
-            echo "Update existing issue #$EXISTING"
-            gh issue comment "$EXISTING" --body-file issue-body.md
+            # 既存Issueの「本文」と「最新のコメント」を取得して、今回のサマリーが含まれているかチェック
+            # grepの-Fオプション（固定文字列）と-qオプション（静かな実行）を使用
+            
+            # 1. 本文を取得
+            ISSUE_CONTENT=$(gh issue view "$EXISTING" --json body --jq '.body')
+            # 2. 最新のコメントを取得
+            LATEST_COMMENT=$(gh issue view "$EXISTING" --json comments --jq '.comments[-1].body // ""')
+
+            # trivy-summary.md の内容（テーブル部分）が既にあるか比較
+            # ※完全一致だとランID等が変わるため、テーブルのヘッダー行などで判定するのが確実です
+            TABLE_ID="### Trivy detected vulnerabilities"
+            
+            if echo "$ISSUE_CONTENT" | grep -q "$TABLE_ID" || echo "$LATEST_COMMENT" | grep -q "$TABLE_ID"; then
+              # すでに結果が貼られている場合、内容に差分があるかチェック
+              # 差分がない（前回のサマリーと今回が同じ）場合はスキップ
+              if echo "$ISSUE_CONTENT $LATEST_COMMENT" | grep -qFf trivy-summary.md; then
+                echo "No changes in scan results. Skipping comment."
+              else
+                echo "Vulnerability list changed. Updating existing issue #$EXISTING"
+                gh issue comment "$EXISTING" --body-file issue-body.md
+              fi
+            else
+              # テーブルが存在しない（タイトルだけ一致した別件など）場合はコメント
+              gh issue comment "$EXISTING" --body-file issue-body.md
+            fi
           else
             echo "Create new issue"
             gh issue create --title "$TITLE" --body-file issue-body.md --label "${{ env.ISSUE_LABELS }}"
