@@ -29,7 +29,7 @@ jobs:
             MED=$(jq '[.Results[].Vulnerabilities[]? | select(.Severity=="MEDIUM")] | length' $f)
             DATE=$(jq -r '.Metadata.NextUpdate // "N/A"' $f | cut -d'T' -f1)
             
-            echo "| $REPO_NAME | **$CRIT** | $HIGH | $MED | $DATE |" >> README.md
+            echo "| $REPO_NAME | ⚠️**$CRIT** | $HIGH | $MED | $DATE |" >> README.md
           done
           
           git config user.name "Dashboard Bot"
