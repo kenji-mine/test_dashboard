@@ -34,6 +34,15 @@ jobs:
             [ -e "$f" ] || continue
             
             REPO_NAME=$(basename "$f" .json)
+            # --- デバッグ開始 ---
+            echo "--- Debugging $REPO_NAME ---"
+            # JSON全体のキー構造（第2階層まで）を表示して構造を確認
+            echo "JSON Structure:"
+            jq -r 'keys_unsorted' "$f"
+            # "CreatedAt" や "NextUpdate" という名前を含むキーがどこにあるか検索
+            echo "Date-related keys location:"
+            jq -r 'path(.. | select(has("CreatedAt")? or has("NextUpdate")?))' "$f" || echo "No date keys found"
+            # --- デバッグ終了 ---
             
             # jq の処理をまとめて効率化
             STATS=$(jq -r '
