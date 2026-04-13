@@ -44,14 +44,14 @@ jobs:
             jq -r 'path(.. | select(has("CreatedAt")? or has("NextUpdate")?))' "$f" || echo "No date keys found"
             # --- デバッグ終了 ---
             
-            # jq の処理をまとめて効率化
+            # ルート直下の .CreatedAt を直接参照するように修正
+            # 万が一 Metadata の下にある場合も考慮して、再帰探索も予備で残します
             STATS=$(jq -r '
-              [ .Results[].Vulnerabilities[]? ] as $v |
               {
-                crit: ($v | map(select(.Severity=="CRITICAL")) | length),
-                high: ($v | map(select(.Severity=="HIGH")) | length),
-                med:  ($v | map(select(.Severity=="MEDIUM")) | length),
-                date: (.Metadata.CreatedAt // .Metadata.NextUpdate // "N/A")
+                date: (.CreatedAt? // .Metadata.CreatedAt? // .StartTime? // "N/A"),
+                crit: ([.Results[].Vulnerabilities[]? | select(.Severity=="CRITICAL")] | length),
+                high: ([.Results[].Vulnerabilities[]? | select(.Severity=="HIGH")] | length),
+                med:  ([.Results[].Vulnerabilities[]? | select(.Severity=="MEDIUM")] | length)
               }' "$f")
 
             CRIT=$(echo "$STATS" | jq -r '.crit')
