@@ -19,6 +19,8 @@ jobs:
         uses: actions/checkout@v5 # 今後 v5 等が出ればそちらに更新を推奨
 
       - name: Generate Summary Table
+        env:
+          TZ: 'Asia/Tokyo' # タイムゾーンを日本時間に設定
         run: |
           echo "## 🛡️ 組織内セキュリティ・ダッシュボード" > README.md
           echo "最終更新日: $(date +'%Y-%m-%d %H:%M')" >> README.md
