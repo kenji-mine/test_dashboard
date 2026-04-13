@@ -7,7 +7,7 @@ on:
         required: true
         type: string
     secrets:
-      SUMMARY_REPO_TOKEN2:
+      SUMMARY_REPO_TOKEN:
         required: true
 
 permissions:
@@ -78,7 +78,7 @@ jobs:
           
       - name: Send result to Summary Repo
         env:
-          GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN2 }} # 集計リポジトリへの書込権限を持つPAT
+          GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN }} # 集計リポジトリへの書込権限を持つPAT
         run: |
           echo "Token length is ${#GH_TOKEN}"
           gh auth status
