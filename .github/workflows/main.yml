@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4 # 今後 v5 等が出ればそちらに更新を推奨
+        uses: actions/checkout@v5 # 今後 v5 等が出ればそちらに更新を推奨
 
       - name: Generate Summary Table
         run: |
