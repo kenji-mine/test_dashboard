@@ -3,8 +3,8 @@
   "Trivy": {
     "Version": "0.69.3"
   },
-  "ReportID": "019d85fb-21e1-7bf4-a2ae-e8a371886b1a",
-  "CreatedAt": "2026-04-13T08:35:21.185784685Z",
+  "ReportID": "019d8f98-c247-7954-bdcf-e3d5ff342ab1",
+  "CreatedAt": "2026-04-15T05:24:06.343612577Z",
   "ArtifactName": "sbom/sbom.json",
   "ArtifactType": "cyclonedx",
   "Results": [
@@ -4954,7 +4954,7 @@
             "https://github.com/nodejs/undici/security/advisories/GHSA-vrm6-8vpv-qv8q",
             "https://hackerone.com/reports/3481206",
             "https://linux.oracle.com/cve/CVE-2026-1526.html",
-            "https://linux.oracle.com/errata/ELSA-2026-7350.html",
+            "https://linux.oracle.com/errata/ELSA-2026-7675.html",
             "https://nvd.nist.gov/vuln/detail/CVE-2026-1526",
             "https://owasp.org/www-community/attacks/Denial_of_Service",
             "https://www.cve.org/CVERecord?id=CVE-2026-1526"
@@ -5016,7 +5016,7 @@
             "https://github.com/nodejs/undici/security/advisories/GHSA-v9p9-hfj2-hcw8",
             "https://hackerone.com/reports/3487486",
             "https://linux.oracle.com/cve/CVE-2026-2229.html",
-            "https://linux.oracle.com/errata/ELSA-2026-7350.html",
+            "https://linux.oracle.com/errata/ELSA-2026-7675.html",
             "https://nodejs.org/api/zlib.html#class-zlibinflateraw",
             "https://nvd.nist.gov/vuln/detail/CVE-2026-2229",
             "https://www.cve.org/CVERecord?id=CVE-2026-2229"
