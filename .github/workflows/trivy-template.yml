@@ -6,6 +6,9 @@ on:
       sbom_path:
         required: true
         type: string
+      assignees:
+        required: true
+        type: string
 permissions:
   contents: read
   issues: write
@@ -164,7 +167,7 @@ jobs:
             fi
           else
             echo "Create new issue"
-            gh issue create --title "$TITLE" --body-file issue-body.md --label "${{ env.ISSUE_LABELS }}" --assignee "kenji-mine"
+            gh issue create --title "$TITLE" --body-file issue-body.md --label "${{ env.ISSUE_LABELS }}" --assignee "${{inputs.assignees}}"
           fi
 
       - name: Check Results
