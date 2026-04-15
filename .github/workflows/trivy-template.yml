@@ -14,9 +14,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.SUMMARY_REPO_TOKEN }}
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      SBOM_PATH: sbom/sbom.json
       SEVERITY: "CRITICAL,HIGH"
       ISSUE_LABELS: "security,trivy,sbom"
       ISSUE_TITLE_PREFIX: "[Trivy][SBOM]"
@@ -45,7 +43,7 @@ jobs:
         shell: bash
         run: |
           # setup-trivy を使うと、パスが自動で通ります
-          trivy sbom --format json --output ${{ github.event.repository.name }}.json --severity "${SEVERITY}" --ignore-unfixed --exit-code 0 "${SBOM_PATH}"
+          trivy sbom --format json --output ${{ github.event.repository.name }}.json --severity "${SEVERITY}" --ignore-unfixed --exit-code 0 "${inputs.sbom_path}"
 
       - name: Summarize findings
         id: summary
@@ -61,7 +59,7 @@ jobs:
             [
               "### Trivy detected vulnerabilities (from CycloneDX SBOM)",
               "",
-              "- SBOM: `'"${{ env.SBOM_PATH }}"'`",
+              "- SBOM: `'"${{ inputs.sbom_path }}"'`",
               "- Severity filter: `'"${{ env.SEVERITY }}"'`",
               "",
               "| Severity | Pkg | Installed | Fixed | CVE | Title |",
@@ -122,7 +120,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
-          TITLE="${{ env.ISSUE_TITLE_PREFIX }} ${{ env.SEVERITY }} found in ${{ env.SBOM_PATH }}"
+          TITLE="${{ env.ISSUE_TITLE_PREFIX }} ${{ env.SEVERITY }} found in ${{ inputs.sbom_path }}"
           
           # Issue本文の組み立て
           {
@@ -165,7 +163,7 @@ jobs:
             fi
           else
             echo "Create new issue"
-            gh issue create --title "$TITLE" --body-file issue-body.md --label "${{ env.ISSUE_LABELS }}"
+            gh issue create --title "$TITLE" --body-file issue-body.md --label "${{ env.ISSUE_LABELS }}" --assignee "kenji-mine"
           fi
 
       - name: Check Results
