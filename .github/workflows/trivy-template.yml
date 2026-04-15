@@ -42,9 +42,9 @@ jobs:
       - name: Run Trivy Scan
         shell: bash
         run: |
-          echo "sbom_path is ${inputs.sbom_path}"
+          echo "sbom_path is ${{inputs.sbom_path}}"
           # setup-trivy を使うと、パスが自動で通ります
-          trivy sbom --format json --output ${{ github.event.repository.name }}.json --severity "${SEVERITY}" --ignore-unfixed --exit-code 0 "${inputs.sbom_path}"
+          trivy sbom --format json --output ${{ github.event.repository.name }}.json --severity "${SEVERITY}" --ignore-unfixed --exit-code 0 "${{inputs.sbom_path}}"
 
       - name: Summarize findings
         id: summary
