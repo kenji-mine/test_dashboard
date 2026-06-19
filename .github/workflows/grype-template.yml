@@ -38,9 +38,8 @@ jobs:
           repositories: "test_dashboard"
       # URL を指定せず、公式のセットアップアクションに任せます
       - name: Install Grype
-        uses: anchore/setup-grype@v1
-        with:
-          cache: true
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
 
       - name: Run Grype Scan
         shell: bash
