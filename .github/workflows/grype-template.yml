@@ -1,0 +1,235 @@
+name: Reusable Grype Scan
+
+on:
+  workflow_call:
+    inputs:
+      sbom_path:
+        required: true
+        type: string
+      assignees:
+        required: true
+        type: string
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      SEVERITY: "CRITICAL,HIGH"
+      ISSUE_LABELS: "security,grype,sbom"
+      ISSUE_TITLE_PREFIX: "[Grype][SBOM]"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false # これを追加
+      # 【追加】参照側（Template）の中でトークンを作る
+      - name: Generate Token
+        id: internal_gen_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: kenji-mine
+          repositories: "test_dashboard"
+      # URL を指定せず、公式のセットアップアクションに任せます
+      - name: Install Grype
+        uses: anchore/setup-grype@v1
+        with:
+          cache: true
+
+      - name: Run Grype Scan
+        shell: bash
+        run: |
+          echo "sbom_path is ${{inputs.sbom_path}}"
+          # setup-trivy を使うと、パスが自動で通ります
+          grype sbom:"${{inputs.sbom_path}}" -o json --file grype-raw.json
+
+      - name: Convert Grype output to Trivy format
+        shell: bash
+        run: |
+          # Grype JSON → Trivy JSON 変換
+          # Grypeフィールドの対応:
+          #   matches[].vulnerability.id         → VulnerabilityID
+          #   matches[].artifact.name            → PkgName
+          #   matches[].artifact.version         → InstalledVersion
+          #   matches[].vulnerability.fix.versions → FixedVersion (fix.state=="fixed" のみ)
+          #   matches[].vulnerability.description → Title
+          #   matches[].vulnerability.severity    → Severity (大文字変換)
+          #   matches[].vulnerability.cvss[].source + metrics.baseScore → CVSS.{source}.V3Score
+          jq --arg sbom "${{ inputs.sbom_path }}" --arg severity "${{ env.SEVERITY }}" '
+            ($severity | split(",") | map(ascii_upcase)) as $sev_filter |
+            {
+              "SchemaVersion": 2,
+              "ArtifactName": $sbom,
+              "ArtifactType": "cyclonedx",
+              "Results": [
+                {
+                  "Target": $sbom,
+                  "Class": "lang-pkgs",
+                  "Type": "cyclonedx",
+                  "Vulnerabilities": [
+                    .matches[]? |
+                    select(.vulnerability.fix.state == "fixed") |
+                    select(.vulnerability.severity | ascii_upcase | IN($sev_filter[])) |
+                    {
+                      "VulnerabilityID": .vulnerability.id,
+                      "PkgName": .artifact.name,
+                      "InstalledVersion": (.artifact.version // ""),
+                      "FixedVersion": ((.vulnerability.fix.versions // []) | join(", ")),
+                      "Title": (.vulnerability.description // ""),
+                      "Severity": (.vulnerability.severity | ascii_upcase),
+                      "CVSS": (
+                        if ((.vulnerability.cvss // []) | length) > 0 then
+                          (.vulnerability.cvss // []) | reduce .[] as $c (
+                            {};
+                            . + {
+                              ($c.source | ascii_downcase): {
+                                "V3Score": ($c.metrics.baseScore // null),
+                                "V3Vector": ($c.vector // "")
+                              }
+                            }
+                          )
+                        else {}
+                        end
+                      )
+                    }
+                  ]
+                }
+              ]
+            }
+          ' grype-raw.json > ${{ github.event.repository.name }}.json
+
+      - name: Summarize findings
+        id: summary
+        shell: bash
+        run: |
+          # 脆弱性数をカウント
+          COUNT=$(jq '[.Results[]?.Vulnerabilities[]?] | length' ${{ github.event.repository.name }}.json)
+          echo "count=${COUNT}" >> $GITHUB_OUTPUT
+
+          # 結果をMarkdownテーブル化
+          jq -r '
+            def safe(x): (x // "" | tostring);
+            [
+              "### Trivy detected vulnerabilities (from CycloneDX SBOM)",
+              "",
+              "- SBOM: `'"${{ inputs.sbom_path }}"'`",
+              "- Severity filter: `'"${{ env.SEVERITY }}"'`",
+              "",
+              "| Severity | Pkg | Installed | Fixed | CVE | Title |",
+              "|---|---|---:|---:|---|---|",
+              (
+                .Results[]?.Vulnerabilities[]? |
+                [
+                  safe(.Severity),
+                  safe(.PkgName),
+                  safe(.InstalledVersion),
+                  safe(.FixedVersion),
+                  safe(.VulnerabilityID),
+                  safe(.Title)
+                ] | @tsv
+              )
+            ] | .[0:7] + (
+              .[7:] | map(split("\t") | "| \(.[0]) | \(.[1]) | \(.[2]) | \(.[3]) | \(.[4]) | \(.[5]) |") | .[0:30]
+            ) | join("\n")
+          ' ${{ github.event.repository.name }}.json > trivy-summary.md
+          
+      - name: Send result to Summary Repo
+        env:
+          GH_TOKEN: ${{ steps.internal_gen_token.outputs.token }} 
+        run: |
+          echo "Token length is ${#GH_TOKEN}"
+          gh auth status
+          echo "=== Current Token Status ==="
+          gh auth status
+          echo "=== Accessible Repositories ==="
+          # このトークンでアクセス可能なリポジトリを一覧表示
+          gh api -H "Accept: application/vnd.github+json" /installation/repositories --jq '.repositories[].full_name'
+        
+          # 集計リポジトリを一時的にcloneしてファイルを置いてPushする
+          # 1. クローン (ディレクトリ名は test_dashboard になる)
+          git clone https://x-access-token:${GH_TOKEN}@github.com/kenji-mine/test_dashboard.git
+          # 2. クローンしたディレクトリの中へ移動
+          cd test_dashboard
+          # 3. 既存のディレクトリ summary-repo/data/ の存在を確認し、なければ作成
+          mkdir -p summary-repo/data/   
+          # 4. JSONファイルをコピー (元の場所は1つ上の階層なので ../ を指定)
+          cp ../${{ github.event.repository.name }}.json summary-repo/data/
+          # 5. Git 設定
+          git config user.name "Trivy Bot"
+          git config user.email "trivy-bot@example.com"
+          # 6. コピーしたファイルをステージング
+          git add summary-repo/data/${{ github.event.repository.name }}.json
+          # 7. 変更がある場合のみコミット・プッシュ
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update scan result for pfe-handson-run in summary-repo/data"
+            git push
+          fi
+          
+      - name: Create or update issue
+        if: steps.summary.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          TITLE="${{ env.ISSUE_TITLE_PREFIX }} ${{ env.SEVERITY }} found in ${{ inputs.sbom_path }}"
+          
+          # Issue本文の組み立て
+          {
+            echo "## Summary"
+            echo "Trivy found vulnerabilities from CycloneDX SBOM scan."
+            echo "- Repository: ${{ github.repository }}"
+            echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo ""
+            cat trivy-summary.md
+          } > issue-body.md
+
+          # 既存のOpenなIssueがあるか確認
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number' || true)
+
+          if [ -n "$EXISTING" ]; then
+            # 既存Issueの「本文」と「最新のコメント」を取得して、今回のサマリーが含まれているかチェック
+            # grepの-Fオプション（固定文字列）と-qオプション（静かな実行）を使用
+            
+            # 1. 本文を取得
+            ISSUE_CONTENT=$(gh issue view "$EXISTING" --json body --jq '.body')
+            # 2. 最新のコメントを取得
+            LATEST_COMMENT=$(gh issue view "$EXISTING" --json comments --jq '.comments[-1].body // ""')
+
+            # trivy-summary.md の内容（テーブル部分）が既にあるか比較
+            # ※完全一致だとランID等が変わるため、テーブルのヘッダー行などで判定するのが確実です
+            TABLE_ID="### Trivy detected vulnerabilities"
+            
+            if echo "$ISSUE_CONTENT" | grep -q "$TABLE_ID" || echo "$LATEST_COMMENT" | grep -q "$TABLE_ID"; then
+              # すでに結果が貼られている場合、内容に差分があるかチェック
+              # 差分がない（前回のサマリーと今回が同じ）場合はスキップ
+              if echo "$ISSUE_CONTENT $LATEST_COMMENT" | grep -qFf trivy-summary.md; then
+                echo "No changes in scan results. Skipping comment."
+              else
+                echo "Vulnerability list changed. Updating existing issue #$EXISTING"
+                gh issue comment "$EXISTING" --body-file issue-body.md
+              fi
+            else
+              # テーブルが存在しない（タイトルだけ一致した別件など）場合はコメント
+              gh issue comment "$EXISTING" --body-file issue-body.md
+            fi
+          else
+            echo "Create new issue"
+            gh issue create --title "$TITLE" --body-file issue-body.md --label "${{ env.ISSUE_LABELS }}" --assignee "${{inputs.assignees}}"
+          fi
+
+      - name: Check Results
+        run: |
+          if [ -f ${{ github.event.repository.name }}.json ]; then
+            echo "Success: ${{ github.event.repository.name }}.json created."
+          else
+            echo "Error: Scan failed or file not found."
+            exit 1
+          fi
